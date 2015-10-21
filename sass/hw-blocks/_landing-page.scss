@@ -1,0 +1,366 @@
+/*
+=============
+Block Globals
+=============
+*/
+
+#wrapper-wb955789e0bd18ef,
+#wrapper-wxn55b2a37cad902,
+#wrapper-wm65591a6abc65d9 {
+	p {
+		margin: initial;
+	}
+}
+
+/*
+=========
+WFC Logo
+=========
+*/
+
+#wfc-logo {
+	background-color: $wfc-lightorange;
+	display: inline-block;
+  	//margin-left: 5.5%;
+  	padding: 0.9rem 1.6rem;
+	position: absolute;
+  	top: 0;
+  	width: 13rem;
+  	z-index: 999;
+
+  	img {
+  		max-width: 100%;
+  		width: 100%;
+  	}
+}
+
+@media screen and (max-width: 1399px) {
+	#wfc-logo {
+		margin-left: 0;
+		width: 11rem;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	#wfc-logo {
+		width: 9rem;
+	}
+}
+
+/*
+===========
+Visit Block
+===========
+*/
+
+
+.wrapper-visit {
+	background-color: $wfc-green;
+	border-top: 0.6rem solid $wfc-darkgreen;
+	color: $wfc-white;
+}
+
+.visit-block {
+	line-height: 160%;
+}
+
+#visit-info {
+	display: table;
+	margin: 0 auto;
+}
+
+#visit-container {
+	display: table;
+	margin: 0 auto;
+}
+
+#visit-hours,
+#visit-prices,
+#visit-directions {
+    float: left;
+    min-height: 12rem;
+    padding: 1rem 0 1rem 1.35rem;
+    width: 16rem;
+
+    p:first-of-type {
+	  font-weight: bold;
+	  margin-bottom: 0.4rem;
+	}
+
+	a {
+		color: inherit;
+		font-weight: bold;
+		letter-spacing: 0.02rem;
+		text-decoration: none;
+	}
+}
+
+#visit-prices {
+	border-left: 1px solid $wfc-bordergreen;
+	border-right: 1px solid $wfc-bordergreen;
+	//padding-left: 1.5rem;
+}
+
+#wfc-hours {
+	margin: 0 0 1.2rem;
+}
+
+#visit-guest-type,
+#visit-price-amount {
+  float: left;
+}
+
+#visit-guest-type {
+	width: 75%;
+}
+
+#visit-price-amount {
+	width: 25%;
+}
+
+#visit-action-bar {
+	border-top: 1px solid $wfc-bordergreen;
+	clear: both;
+	float: left;
+	padding: 0.65rem 1.35rem;
+	min-width: 51rem;
+}	
+
+#visit-action-bar p {
+ 	display: inline-block;
+}
+
+#visit-membership {
+	margin-left: 3.25rem;
+} 
+
+@media screen and (max-width: 800px) {
+
+	#visit-action-bar p {
+	  float: left;
+	}
+
+	#visit-membership {
+	  float: left;
+	  clear: both;
+	  margin-left: 0;
+	  margin-top: 0.9rem;
+	  margin-bottom: 0.9rem;
+	}
+
+}
+
+@media screen and (max-width: 662px) {
+	#visit-container{
+		display: block;
+	}
+
+	#visit-directions {
+	  clear: left;
+	}
+
+	#visit-action-bar {
+	  border-left: 1px solid $wfc-bordergreen;
+	  border-top: none;
+	  clear: none;
+	  height: 10rem;
+	  min-width: 0;
+	  padding: 1rem 0 1rem 1.35rem;
+	  width: 16rem;
+	 }
+
+	 #visit-hours {
+	 	border-right: 1px solid $wfc-bordergreen;
+	 	border-bottom: 1px solid $wfc-bordergreen;
+	 }
+
+	 #visit-prices {
+	 	border-left: none;
+	 	border-right: none;
+	 	border-bottom: 1px solid $wfc-bordergreen;
+	 }
+}
+
+@media screen and (max-width: 486px) {
+		#visit-hours, 
+		#visit-prices, 
+		#visit-directions {
+			min-height: 10rem;
+			width: 100%;
+		}
+
+		#visit-hours {
+			border-right: none;
+		}
+
+		#visit-hours {
+			border-right: none;
+		}
+
+		#visit-action-bar {
+			border-left: none;
+			border-top: 1px solid $wfc-bordergreen;
+			height: auto;
+			padding: 1rem;
+			width: auto;
+		}
+}
+
+/*
+===================
+Visit Gardens Block
+===================
+*/
+
+.landing-gardens {
+	background-color: $wfc-white;
+}
+
+#garden-visit-img {
+    float: right;
+    padding: 2rem 0;
+    text-align: center;
+    
+    img {
+    	max-width: 100%;
+    	width: 100%;
+    }
+}
+
+@media screen and (max-width: 759px) {
+	.landing-gardens .wfc-callout-container {
+		width: initial;
+	}
+}
+
+/*
+==========
+NPIN Block
+==========
+*/
+
+.landing-npin {
+	background-color: $wfc-white;
+}
+
+#npin-search-wrapper {
+	background-image: url('//utw10069.utweb.utexas.edu/wp-content/uploads/2015/07/BL_IMG000092_light.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 0;
+    padding-top: 39rem;
+    position: relative;
+    width: 100%;
+}
+
+#npin-search-form-wrapper {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+#npin-search-form {
+	background-color: rgba(0,0,0,0.45);
+	color: $wfc-white;
+	display: block;
+	margin: 4rem auto 0;
+	padding: 3rem;
+	text-align: left;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	max-width: 35rem; 
+
+	h1 {
+		line-height: 115%;
+	}
+
+	h3 {
+		line-height: 140%;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+#form-npin-simple {
+	input[type="text"] {
+		height: 3rem;
+	    margin: 2rem 0;
+	    max-width: 29rem;
+	    width: 85%;
+	}
+
+	input[placeholder] {
+		font-size: 1.2rem;
+		padding-left: 1rem;
+	}
+
+	button {
+		background: none;
+		border: none;
+		vertical-align: middle;
+
+		img {
+			vertical-align: bottom;
+			width: 2rem;
+		}
+	}
+	button:hover {
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	#npin-search-wrapper {
+		padding-top: 43rem;
+	}
+
+	#npin-search-form-wrapper {
+		height: 100%;
+	}
+
+	#npin-search-form {
+		height: 100%;
+		margin-top: 0;
+		padding: 3rem 3rem;
+		
+	}
+
+	#form-npin-simple {
+		input[type="text"] {
+			//margin: 0;
+			width: 70%;
+		}
+
+		input[placeholder] {
+			font-size: 1rem;
+		}
+
+		button {
+			margin-left: 0.8rem;
+			padding: 0;
+		}
+
+		img {
+			width: 65%;
+		}
+	}
+}
+
+@media screen and (max-width: 573px) {
+	#npin-search-form {
+			padding: 3rem 1.5rem;		
+		}
+}
+
+/*
+=============
+Widgets Block
+=============
+*/
+
+.landing-widgets {
+	background-color: $wfc-white;
+}

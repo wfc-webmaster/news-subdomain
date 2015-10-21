@@ -1,0 +1,81 @@
+html{
+  @include responsive("font-size", 14px,
+    (
+       // 600px: 12px,
+       // 800px: 13px,
+      1180px: 14px,
+      1300px: 15px,
+      1750px: 16px,
+      1900px: 17px,
+      2100px: 18px      
+    )
+  );
+}
+
+$ms-base: 1rem;
+$ms-ratio: $minor-third;  // 1.2
+
+body {
+  font-family: open-sans, sans-serif; 
+	font-size: ms(0); 
+}
+
+h6 {
+  font-size: ms(0);
+  font-weight: 900;
+  line-height: 100%;
+}
+
+h5 { 
+	font-size: ms(1); 
+}
+
+h4 { 
+	font-size: ms(2); 
+}
+
+h3 { 
+	font-size: ms(3);
+  font-weight: 600;
+  line-height: 120%;
+  margin: 1.5rem 0 1rem; 
+}
+
+h2 { 
+	font-size: ms(4);
+  font-weight: 900;
+  line-height: 120%; 
+}
+
+h1 { 
+	font-size: ms(5);
+  font-weight: 900;
+  line-height: 110%;
+  margin: 0.5rem 0 1rem;
+}
+
+address {
+  font-style: normal;
+  margin: 0 0 1.2rem;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+  margin: 0.5rem 0 1rem 0;
+}
+
+a {
+   color: $wfc-lightorange;
+   text-decoration: none;
+
+   .fa {
+    color: $wfc-gray; 
+   }
+}
+
+ a:hover {
+   text-decoration: underline !important;
+ }
