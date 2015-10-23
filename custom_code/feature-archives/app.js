@@ -6,11 +6,11 @@ var featureArchive = angular.module('featureArchive', [
 featureArchive.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 	when('/summary', {
-		templateUrl: 'http://localhost:8888/wildflower_2/wordpress/wp-content/themes/wildflowercenter/custom_code/feature-archives/partials/summary.html',
+		templateUrl: 'http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/feature-archives/partials/summary.html',
 		controller: 'SummaryController'
 	}).
 	when('/fullarticles/:itemId', {
-		templateUrl: 'http://localhost:8888/wildflower_2/wordpress/wp-content/themes/wildflowercenter/custom_code/feature-archives/partials/fullarticles.html',
+		templateUrl: 'http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/feature-archives/partials/fullarticles.html',
 		controller: 'FullArticleController'
 	}).
 	otherwise({

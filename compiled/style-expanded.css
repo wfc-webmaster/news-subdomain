@@ -235,8 +235,6 @@ body {
   font-size: 1.2rem;
 }
 .social-media-container ul {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 1rem 0;
 }
@@ -1426,8 +1424,6 @@ div#whitewrap div.wrapper-mirroring-wm65591a6abc65d9 {
   width: 25rem;
 }
 #footer-social-media ul {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 #footer-social-media ul li {

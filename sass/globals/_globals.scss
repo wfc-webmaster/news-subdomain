@@ -13,9 +13,16 @@ body {
 
 	h1 {
 		display: table;
-		float: left;
-        font-size: 1.9rem;
+		font-size: 1.9rem;
+        margin-bottom: 0.2rem;
 	}
+    h3 {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    a {
+        color: inherit;
+    }
 }
 
 .block img, .wp-caption {
@@ -57,7 +64,11 @@ body {
     }
 
     li {
-        margin-right: 0.5rem;
+        margin-right: 1.1rem;
+    }
+
+    li:last-child {
+        margin-right: 0;
     }
 }
 

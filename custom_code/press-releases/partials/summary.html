@@ -15,7 +15,7 @@
 		</label>	
 	</div>
 	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction">
-	<a href="http://localhost:8888/wildflower_2/wordpress/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">
+	<a href="http://localhost:8888/wildflower_news/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">
 		<div class="row panel-body">
 			<div class="pressrelease-summary">
 				<h3>{{pressrelease.name}}</h3>

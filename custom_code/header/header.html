@@ -1,0 +1,29 @@
+<div id="header-wrapper">
+	<div id="logo-container" class="header-block">
+		<img width="100%" height="auto" src="http://localhost:8888/wildflower_news/wp-content/uploads/2015/10/wfc-logo-square.svg">
+	</div>
+	<div id="header-text-container" class="header-block">
+		<div id="header-title" class="header-block">
+			<h1>Wildflower News</h1>
+			<h3><a href="//wildflower.org">Lady Bird Johnson Wildflower Center</a></h3>
+		</div>
+		<div id="header-social-icons" class="social-media-container">
+			<ul>
+				<li><a href="http://www.facebook.com/wildflowercenter" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="http://twitter.com/WildflowerCtr" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="http://instagram.com/wildflowercenter" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://www.pinterest.com/wildflowerctr/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+				<li><a href="http://www.flickr.com/photos/wildflowercenter" target="_blank"><i class="fa fa-flickr"></i></a></li>
+			</ul>
+		</div>
+		<div id="header-nav">
+			<?php wp_nav_menu( array('menu' => 'Main Nav', 'container' => false )); ?>
+		</div>
+		<div id="header-search">
+			<form action="wildflower_news/" method="get">
+				<input type="text" name="s" id="search" placeholder="Search Wildflower News" value="<?php the_search_query(); ?>" />
+				<input type="hidden" value="post" name="post_type" id="post_type" />				
+			</form>			
+		</div>
+	</div>
+</div>
