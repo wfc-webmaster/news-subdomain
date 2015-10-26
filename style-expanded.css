@@ -211,16 +211,6 @@ body {
   height: auto;
 }
 
-@media screen and (max-width: 2134px) {
-  .page-heading {
-    margin-top: 3rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .page-heading {
-    margin-top: 8rem;
-  }
-}
 @media screen and (max-width: 640px) {
   .page-heading-mobile {
     border-bottom: 1px solid #dedede;
@@ -255,11 +245,6 @@ body {
   .social-media-container {
     clear: both;
     float: left;
-  }
-}
-@media screen and (max-width: 640px) {
-  .social-media-container {
-    display: none;
   }
 }
 @media screen and (max-width: 1180px) {
@@ -499,13 +484,17 @@ div#header-nav {
   border-left: 5px solid #f0b252;
   display: inline-block;
   float: left;
-  margin-right: 4.5rem;
+  margin-right: 2.75rem;
   padding: 0 0 0.1rem 0.5rem;
   text-transform: uppercase;
 }
 #menu-main-nav li.menu-item a {
   font-size: 1rem;
   font-weight: 900;
+}
+
+#menu-main-nav li.menu-item:last-of-type {
+  margin-right: 0;
 }
 
 #mobile-menu-overlay {
@@ -557,7 +546,7 @@ div#header-nav {
   background-color: transparent;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1179px) {
   #mobile-menu-btn {
     display: inline-block;
   }
@@ -1524,7 +1513,7 @@ div#whitewrap div.wrapper-mirroring-wi1562a6ae47d33e {
 
 #header-wrapper {
   display: table;
-  width: 100%;
+  width: 1146px;
 }
 #header-wrapper a {
   color: inherit;
@@ -1552,10 +1541,67 @@ div#whitewrap div.wrapper-mirroring-wi1562a6ae47d33e {
 
 #header-text-container {
   display: table;
+  float: left;
   padding: 0.4rem 0 0 2rem;
-  width: 65.4rem;
+  width: 52.6rem;
 }
 
+@media screen and (max-width: 1179px) {
+  #header-social-icons,
+  #header-nav,
+  #header-search {
+    display: none;
+  }
+
+  #logo-container {
+    width: 5rem;
+  }
+
+  #block-b83562a6bab17cc9 {
+    min-height: 0;
+  }
+
+  #header-text-container {
+    padding: 0.2rem 0 0 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  #header-text-container h1 {
+    font-size: 1.5rem;
+  }
+  #header-text-container h3 {
+    font-size: 0.8rem;
+  }
+
+  #logo-container {
+    width: 4rem;
+  }
+}
+@media screen and (min-width: 1180px) {
+  #header-text-container {
+    width: 70.9rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #header-text-container {
+    width: 65.4rem;
+  }
+}
+@media screen and (min-width: 1750px) {
+  #header-text-container {
+    width: 60.6rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  #header-text-container {
+    width: 56.4rem;
+  }
+}
+@media screen and (min-width: 2100px) {
+  #header-text-container {
+    width: 52.6rem;
+  }
+}
 #header-search {
   float: right;
   margin: 1.5rem 0.1rem 0;

@@ -9,7 +9,7 @@ div#header-nav {
     border-left: 5px solid $wfc-lightorange;
     display: inline-block;
     float: left;
-    margin-right: 4.5rem;
+    margin-right: 2.75rem;
     padding: 0 0 0.1rem 0.5rem;
     text-transform: uppercase;
 
@@ -17,6 +17,11 @@ div#header-nav {
       font-size: 1rem;
       font-weight: 900;
     }
+
+}
+
+#menu-main-nav li.menu-item:last-of-type {
+  margin-right: 0;
 }
 
 
@@ -73,7 +78,7 @@ div#header-nav {
     background-color: transparent;
   }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1179px) {
     #mobile-menu-btn {
       display: inline-block;
     }

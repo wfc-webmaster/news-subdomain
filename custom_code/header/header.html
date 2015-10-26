@@ -1,6 +1,6 @@
 <div id="header-wrapper">
 	<div id="logo-container" class="header-block">
-		<img width="100%" height="auto" src="http://localhost:8888/wildflower_news/wp-content/uploads/2015/10/wfc-logo-square.svg">
+		<a href="/wildflower_news"><img width="100%" height="auto" src="http://localhost:8888/wildflower_news/wp-content/uploads/2015/10/wfc-logo-square.svg"></a>
 	</div>
 	<div id="header-text-container" class="header-block">
 		<div id="header-title" class="header-block">
@@ -20,7 +20,7 @@
 			<?php wp_nav_menu( array('menu' => 'Main Nav', 'container' => false )); ?>
 		</div>
 		<div id="header-search">
-			<form action="wildflower_news/" method="get">
+			<form action="../wildflower_news" method="get">
 				<input type="text" name="s" id="search" placeholder="Search Wildflower News" value="<?php the_search_query(); ?>" />
 				<input type="hidden" value="post" name="post_type" id="post_type" />				
 			</form>			
