@@ -1,10 +1,10 @@
 jQuery(document).ready(function($){
 
-	$.get("wp-content/themes/wildflowercenter/custom_code/news-page/magazine-callout/magazine-test.php", function(magData) {
+	$.get("../wp-content/themes/wildflowercenter/custom_code/news-page/magazine-callout/magazine-test.php", function(magData) {
 	    
 	    //Parse JSON from PHP file
 	    var parseFromPHP = jQuery.parseJSON(magData);
-	    console.log(parseFromPHP);
+	    //console.log(parseFromPHP);
 	    
 	    //Create objects from JSON
 	    var issue1 = JSON.parse(parseFromPHP[0]);
@@ -17,8 +17,10 @@ jQuery(document).ready(function($){
 	    //var issues = [issue1, issue2, issue3, issue4]; ------> Uncomment when there are at least 4 issues in the DB
 
 	    //This is where the magazine content goes
-	    var block = document.getElementById('block-b7h56096800b5f2d').children[0];
-	    var blockMobile = document.getElementById('block-big560e9b8098e37').children[0]; //Mobile block
+	    var block = document.getElementsByClassName('entry-content')[0];
+	    //var block = document.getElementById('block-b7h56096800b5f2d').children[0];
+	    //var blockMobile = document.getElementById('block-big560e9b8098e37').children[0]; //Mobile block
+
 
 	    //Set up magazine content to insert into page
 	    var i = 0
@@ -34,7 +36,7 @@ jQuery(document).ready(function($){
 
 		//Insert featured magazine issue
 		block.innerHTML += issue_card_featured;
-		blockMobile.innerHTML += issue_card_featured;
+		//blockMobile.innerHTML += issue_card_featured;
 
 		//console.log(issue_card_featured);
 	    
@@ -53,7 +55,7 @@ jQuery(document).ready(function($){
 
 		    //Insert recent magazine issues
 		    block.innerHTML += issue_card;
-		    blockMobile.innerHTML += issue_card;
+		    //blockMobile.innerHTML += issue_card;
 	    	
 	    	i++;
 	    	id++;

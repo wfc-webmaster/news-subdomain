@@ -189,10 +189,6 @@ div#block-b4256042f27279fb {
 
 @media screen and (max-width: 900px) {
 
-	.block-type-content .type-post {
-	    padding: 0;
-	}
-
 	div#block-bd95602e14f9daef, 
 	div#block-bd95602e14f9daef article {
     	margin-bottom: 0;
@@ -319,7 +315,7 @@ li.feature-list-item {
 	}
 }
 
-div#featured-posts-wrapper.sidebar-container {
+.single #featured-posts-wrapper.sidebar-container {
     margin-top: 11rem;
 }
 
@@ -331,8 +327,8 @@ li.feature-list-item:last-of-type {
 
 @media screen and (max-width: 900px) {
 
-	#featured-posts-wrapper.sidebar-container.mobile-sidebar {
-		margin-top: 0;
-	}
+	// #featured-posts-wrapper.sidebar-container.mobile-sidebar {
+	// 	margin-top: 0;
+	// }
 
 }
