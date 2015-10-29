@@ -1,5 +1,10 @@
 //Magazine Section
 
+#magazine-content {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
 .magazine-current-issue {
 	border-bottom: 1px solid $wfc-lightgray2;
     display: table;
@@ -33,7 +38,7 @@
 .magazine-recent-issues {
     display: table;
     float: left;
-    margin: 1.75rem 3rem 0 0;
+    margin: 1.75rem 2rem 0 0;
     text-align: center;
 
     h6 {
@@ -51,16 +56,22 @@
     }
 }
 
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 1180px) {
     
-    .magazine-recent-issues:nth-of-type(4) {
-        clear: left;
-        padding-left: 0;
+    #magazine-3  {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 796px) {
+    
+    #magazine-2  {
+        margin-right: 0;
     }
 }
 
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 756px) {
     
     .magazine-recent-issues {
         margin-right: 0;

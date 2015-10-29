@@ -7,7 +7,7 @@ $query = new WP_Query(array(
 
 <div id="featured-posts-wrapper" class="sidebar-list-container sidebar-container">
 	<div id="featured-posts-heading" class="sidebar-list-heading">
-		<h6>Featured Stories</h6>
+		<h6>Featured News Stories</h6>
 	</div>
 	<div class="upcoming-events-list">
 		<ul id="featured-posts">

@@ -319,6 +319,10 @@ li.feature-list-item {
     margin-top: 11rem;
 }
 
+.single #featured-posts-wrapper.sidebar-container.mobile-sidebar {
+    margin-top: 0;
+}
+
 li.feature-list-item:last-of-type {
 	border: none;
     padding-bottom: 0;

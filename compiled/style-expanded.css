@@ -377,9 +377,10 @@ Elements
 .sidebar-list-heading {
   background-color: lightgoldenrodyellow;
   border-bottom: 1px solid #dedede;
-  padding: 1rem 0 0.5rem 1rem;
+  padding: 1rem 1rem 0.5rem;
 }
 .sidebar-list-heading h6 {
+  line-height: 125%;
   margin-bottom: 0.5rem;
 }
 
@@ -1555,6 +1556,11 @@ Pages
 News Page
 =========
 */
+#magazine-content {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
 .magazine-current-issue {
   border-bottom: 1px solid #efefef;
   display: table;
@@ -1582,7 +1588,7 @@ News Page
 .magazine-recent-issues {
   display: table;
   float: left;
-  margin: 1.75rem 3rem 0 0;
+  margin: 1.75rem 2rem 0 0;
   text-align: center;
 }
 .magazine-recent-issues h6 {
@@ -1597,13 +1603,17 @@ News Page
   text-decoration: underline;
 }
 
-@media screen and (max-width: 864px) {
-  .magazine-recent-issues:nth-of-type(4) {
-    clear: left;
-    padding-left: 0;
+@media screen and (max-width: 1180px) {
+  #magazine-3 {
+    margin-right: 0;
   }
 }
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 796px) {
+  #magazine-2 {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 756px) {
   .magazine-recent-issues {
     margin-right: 0;
     padding: 0;
@@ -2179,6 +2189,10 @@ li.feature-list-item > ul.post-categories li {
 
 .single #featured-posts-wrapper.sidebar-container {
   margin-top: 11rem;
+}
+
+.single #featured-posts-wrapper.sidebar-container.mobile-sidebar {
+  margin-top: 0;
 }
 
 li.feature-list-item:last-of-type {

@@ -17,10 +17,8 @@ jQuery(document).ready(function($){
 	    //var issues = [issue1, issue2, issue3, issue4]; ------> Uncomment when there are at least 4 issues in the DB
 
 	    //This is where the magazine content goes
-	    var block = document.getElementsByClassName('entry-content')[0];
-	    //var block = document.getElementById('block-b7h56096800b5f2d').children[0];
-	    //var blockMobile = document.getElementById('block-big560e9b8098e37').children[0]; //Mobile block
-
+	    var block = document.getElementById('magazine-content');
+	    
 
 	    //Set up magazine content to insert into page
 	    var i = 0
@@ -36,12 +34,9 @@ jQuery(document).ready(function($){
 
 		//Insert featured magazine issue
 		block.innerHTML += issue_card_featured;
-		//blockMobile.innerHTML += issue_card_featured;
-
-		//console.log(issue_card_featured);
-	    
+		
 		var subBlock = document.getElementById('magazine-featured');
-	    var i = 1;
+	    var i = 0;
 	    var id = 1;
 	    
 
@@ -55,8 +50,7 @@ jQuery(document).ready(function($){
 
 		    //Insert recent magazine issues
 		    block.innerHTML += issue_card;
-		    //blockMobile.innerHTML += issue_card;
-	    	
+		    	    	
 	    	i++;
 	    	id++;
 	    }
