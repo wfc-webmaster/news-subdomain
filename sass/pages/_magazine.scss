@@ -1,8 +1,9 @@
 //Magazine Section
 
 #magazine-content {
+    border-bottom: 1px solid $wfc-lightgray2;
     display: inline-block;
-    margin-bottom: 1rem;
+    padding-bottom: 1.65rem;
 }
 
 .magazine-current-issue {
@@ -99,4 +100,23 @@
     div#block-b7h56096800b5f2d {
         padding: 0 1.5rem;
     }
+}
+
+//Archives Section
+
+#mag-archive-buttons {
+    display: inline-block;
+    margin-top: 0.75rem;
+
+    a {
+        float: left;
+        margin-bottom: 1.25rem;
+        min-width: 12rem;
+        padding: 0.278rem;
+        text-align: center;
+    }
+}
+
+a#mag-issuu {
+    margin-right: 0.75rem;
 }

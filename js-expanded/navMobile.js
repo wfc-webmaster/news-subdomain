@@ -92,7 +92,7 @@ mobile_menu.outerHTML += '<div id="mobile-menu-wrap"><div id="mobile-menu-center
 
 jQuery(document).ready(function($) {
 
-	$.getJSON('//localhost:8888/wildflower_2/wordpress/wp-content/themes/wildflowercenter/json/takeoverNavData.json', function(data) {
+	$.getJSON('//localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/json/takeoverNavData.json', function(data) {
 
 		var visitLinks = '',
 			visitURL;

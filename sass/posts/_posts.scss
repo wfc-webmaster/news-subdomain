@@ -319,9 +319,6 @@ li.feature-list-item {
     margin-top: 11rem;
 }
 
-.single #featured-posts-wrapper.sidebar-container.mobile-sidebar {
-    margin-top: 0;
-}
 
 li.feature-list-item:last-of-type {
 	border: none;
@@ -329,10 +326,10 @@ li.feature-list-item:last-of-type {
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 767px) {
 
-	// #featured-posts-wrapper.sidebar-container.mobile-sidebar {
-	// 	margin-top: 0;
-	// }
+	.single #featured-posts-wrapper.sidebar-container.mobile-sidebar {
+	    margin-top: 0;
+	}
 
 }
