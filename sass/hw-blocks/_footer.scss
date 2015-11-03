@@ -63,13 +63,18 @@
 	  background-color: $wfc-white;
 	  color: $wfc-white;
 	  font-size: 0.9rem;
+	  margin-left: 0.1rem;
 	  padding: 0.5rem;
 	  width: 18rem;
 	}
 
-	input:focus {
-		border: 2px solid $wfc-lightorange;
-		outline: none;
+	#mce-EMAIL {
+		border: none;
+		color: initial;
+	}
+
+	#mce-EMAIL:focus {
+		outline: 2px solid $wfc-lightorange;
 	}
 	input[type="submit"] {
 		background-color: $wfc-lightorange;
