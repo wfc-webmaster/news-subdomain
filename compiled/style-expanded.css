@@ -286,6 +286,16 @@ figcaption.wp-caption-text {
   font-style: italic;
 }
 
+.flex-container-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 /*
 ========
 Elements
@@ -616,7 +626,8 @@ div#header-nav {
 }
 
 .block-type-content div.loop-navigation div.nav-previous a,
-.block-type-content div.loop-navigation div.nav-next a {
+.block-type-content div.loop-navigation div.nav-next a,
+.wfc-archive.nav-previous a {
   background-color: transparent;
   border: 1px solid #f0b252;
   border-radius: 0;
@@ -627,7 +638,8 @@ div#header-nav {
 }
 
 .block-type-content div.loop-navigation div.nav-previous a:hover,
-.block-type-content div.loop-navigation div.nav-next a:hover {
+.block-type-content div.loop-navigation div.nav-next a:hover,
+.wfc-archive.nav-previous a:hover {
   background-color: transparent;
   border: 1px solid #f0b252;
   text-decoration: underline;
@@ -636,6 +648,18 @@ div#header-nav {
 div#post-nav-callout {
   text-align: center;
   margin-bottom: 0.8rem;
+}
+
+.wfc-archive.nav-previous {
+  display: inline-block;
+}
+
+#prev-1 {
+  margin: 0.8rem 0 1.8rem;
+}
+
+#prev-2 {
+  margin: 1.5rem 0 0 0;
 }
 
 /*
@@ -1660,21 +1684,18 @@ Feature Archives :: Summary Page
 ================================
 */
 #archive-container {
-  display: table;
-  padding: 0 1rem 0 0;
+  padding: 0;
 }
 
 #archive-search {
-  margin-top: 1.75rem;
+  border: 1px solid #dedede;
+  background-color: #F0F8FF;
+  flex: 1 1 100%;
+  padding: 1.8rem 1.5rem;
 }
 
 .archive-summary-container {
-  border: 1px solid #dedede;
-  float: left;
-  height: 22rem;
-  margin: 2rem 2rem 0 0;
-  padding: 1rem 1.5rem;
-  width: 27rem;
+  flex: 1;
 }
 
 .archive-summary-container:nth-child(odd) {
@@ -1685,13 +1706,28 @@ div.feature-summary h3 {
   margin: 1rem 0 0.35rem;
 }
 
+#search-field {
+  flex: 1 100%;
+  margin-bottom: 1rem;
+}
+
+.search-sort {
+  flex: 1 auto;
+}
+
+@media screen and (max-width: 430px) {
+  .search-sort {
+    flex: 1 100%;
+  }
+}
 input.search-archives {
   border: 1px solid #dedede;
   font-family: inherit;
   font-size: 0.85rem;
   height: 1.2rem;
-  padding: 0.25rem;
   margin: 0 1rem 0 0.4rem;
+  padding: 0.25rem;
+  width: 65%;
 }
 
 select.archive-sort {
@@ -1707,10 +1743,6 @@ select.archive-sort {
 }
 
 @media screen and (max-width: 861px) {
-  section.summary-page {
-    padding-right: 2rem;
-  }
-
   .archive-summary-container {
     margin-right: 0;
     width: 100%;
@@ -1739,7 +1771,9 @@ Feature Archives :: Full Article Page
 =====================================
 */
 section.full-article-page {
-  margin-top: 2.5rem;
+  border-top: 1px solid #dedede;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .back-to-archive {
@@ -1887,6 +1921,19 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
 
 .img-with-caption-wrap.feature-164:nth-of-type(3) {
   margin-bottom: 1.25rem;
+}
+
+.pressrelease-summary {
+  border-bottom: 1px solid #dedede;
+  flex: 1;
+}
+.pressrelease-summary h2.entry-title {
+  font-size: 1.3rem;
+  margin: 2rem 0 0 0;
+}
+.pressrelease-summary p.archive-date {
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0;
 }
 
 .tribe-events-before-html {

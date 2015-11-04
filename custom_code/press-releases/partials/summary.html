@@ -1,26 +1,26 @@
-<section class="summary-page">
-	<div id="archive-search">
-		<label>Search: <input class="search-archives" placeholder="Search past press releases" size="45" ng-model="searchPressReleases" autofocus></label>
-		<label>Sort by: 
+<section class="summary-page flex-container-column">
+	<div id="archive-search" class="flex-container-row">
+		<label id="search-field">Search: <input class="search-archives" placeholder="Search past press releases" ng-model="searchPressReleases" autofocus></label>
+		<label class="search-sort">Sort by: 
 			<select class="archive-sort" ng-model="orderPressReleases">
 				<option value="id">Date</option>
 				<option value="name">Title</option>
 			</select>
 		</label>
-		<label>Ascending
+		<label class="search-sort">Ascending
 			<input type="radio" ng-model="direction" name="direction">
 		</label>
-		<label>Descending
+		<label class="search-sort">Descending
 			<input type="radio" ng-model="direction" name="direction" value="reverse">
 		</label>	
 	</div>
 	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction">
-	<a href="http://localhost:8888/wildflower_news/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">
 		<div class="row panel-body">
 			<div class="pressrelease-summary">
-				<h3>{{pressrelease.name}}</h3>
-				<p>{{pressrelease.datereleased | date:'longDate'}}</p>
+				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">{{pressrelease.name}}</a></h2>				
+				<p class="archive-date">{{pressrelease.datereleased | date:'longDate'}}</p>
 				<p ng-bind-html="pressrelease.summary"></p>
+				<p><a href="http://localhost:8888/wildflower_news/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
 			</div>					
 		</div>
 	</a>

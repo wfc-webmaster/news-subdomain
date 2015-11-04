@@ -4,21 +4,27 @@ Feature Archives :: Summary Page
 ================================
 */
 #archive-container {
-    display: table;
-    padding: 0 1rem 0 0;
+    padding: 0;
 }
 
 #archive-search {
-    margin-top: 1.75rem;
+    border: 1px solid $wfc-lightgray;
+    background-color: $wfc-lightblue;
+    flex: 1 1 100%;
+    padding: 1.8rem 1.5rem;
 }
 
+// .archive-summary-container {
+//     border: 1px solid $wfc-lightgray;
+//     float: left;
+//     height: 22rem;
+//     margin: 2rem 2rem 0 0;
+//     padding: 1rem 1.5rem;
+//     width: 27rem;
+// }
+
 .archive-summary-container {
-    border: 1px solid $wfc-lightgray;
-    float: left;
-    height: 22rem;
-    margin: 2rem 2rem 0 0;
-    padding: 1rem 1.5rem;
-    width: 27rem;
+    flex: 1;
 }
 
 .archive-summary-container:nth-child(odd) {
@@ -31,13 +37,29 @@ div.feature-summary {
     }
 }
 
+#search-field {
+    flex: 1 100%;
+    margin-bottom: 1rem;
+}
+
+.search-sort {
+    flex: 1 auto;
+}
+
+@media screen and (max-width: 430px) {
+    .search-sort {
+        flex: 1 100%;
+    }
+}
+
 input.search-archives {
     border: 1px solid $wfc-lightgray;
     font-family: inherit;
     font-size: 0.85rem;
     height: 1.2rem;
-    padding: 0.25rem;
     margin: 0 1rem 0 0.4rem;
+    padding: 0.25rem;
+    width: 65%;
 }
 
 select.archive-sort {
@@ -55,11 +77,7 @@ select.archive-sort {
 }
 
 @media screen and (max-width: 861px) {
-    section.summary-page {
-        padding-right: 2rem;
-    }
-
-    .archive-summary-container {
+   .archive-summary-container {
         margin-right: 0;
         width: 100%
     }
@@ -96,7 +114,9 @@ Feature Archives :: Full Article Page
 */
 
 section.full-article-page {
-    margin-top: 2.5rem;
+    border-top: 1px solid #dedede;
+    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .back-to-archive {

@@ -1,0 +1,15 @@
+.pressrelease-summary {
+	border-bottom: 1px solid $wfc-lightgray;
+	flex: 1;
+
+	h2.entry-title {
+	    //color: initial;
+	    font-size: 1.3rem;
+	    margin: 2rem 0 0 0;
+	}
+
+	p.archive-date {
+	    font-size: 0.8rem;
+	    margin: 0.25rem 0 0;
+	}
+}

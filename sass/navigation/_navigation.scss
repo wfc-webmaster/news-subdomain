@@ -171,9 +171,10 @@ div#header-nav {
   }
 }
 
-//Page navigation at bottom of single post pages
+//Page navigation at bottom of single post pages, WFC-archives pages
 .block-type-content div.loop-navigation div.nav-previous a,
-.block-type-content div.loop-navigation div.nav-next a {
+.block-type-content div.loop-navigation div.nav-next a,
+.wfc-archive.nav-previous a {
   background-color: transparent;
   border: 1px solid $wfc-lightorange;
   border-radius: 0;
@@ -184,7 +185,8 @@ div#header-nav {
 }
 
 .block-type-content div.loop-navigation div.nav-previous a:hover,
-.block-type-content div.loop-navigation div.nav-next a:hover {
+.block-type-content div.loop-navigation div.nav-next a:hover,
+.wfc-archive.nav-previous a:hover {
   background-color: transparent;
   border: 1px solid $wfc-lightorange;
   text-decoration: underline;
@@ -193,4 +195,16 @@ div#header-nav {
 div#post-nav-callout {
     text-align: center;
     margin-bottom: 0.8rem;
+}
+
+.wfc-archive.nav-previous {
+  display: inline-block;
+}
+
+#prev-1 {
+  margin: 0.8rem 0 1.8rem; 
+}
+
+#prev-2 {
+  margin: 1.5rem 0 0 0; 
 }
