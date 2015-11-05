@@ -1,5 +1,4 @@
 /*
-================================
 Feature Archives :: Summary Page
 ================================
 */
@@ -14,28 +13,6 @@ Feature Archives :: Summary Page
     padding: 1.8rem 1.5rem;
 }
 
-// .archive-summary-container {
-//     border: 1px solid $wfc-lightgray;
-//     float: left;
-//     height: 22rem;
-//     margin: 2rem 2rem 0 0;
-//     padding: 1rem 1.5rem;
-//     width: 27rem;
-// }
-
-.archive-summary-container {
-    flex: 1;
-}
-
-.archive-summary-container:nth-child(odd) {
-    margin-right: 0;
-}
-
-div.feature-summary {
-    h3 {
-        margin: 1rem 0 0.35rem;
-    }
-}
 
 #search-field {
     flex: 1 100%;
@@ -107,6 +84,33 @@ select.archive-sort {
     }
 }
 
+.archive-summary-container {
+    flex: 1;
+}
+
+.feature-summary {
+    border-bottom: 1px solid $wfc-lightgray;
+    margin: 2rem 0 0 0;
+
+    h2.entry-title {
+        //color: initial;
+        font-size: 1.3rem;
+    }
+    p.archive-date {
+        font-size: 0.8rem;
+        margin: 0.25rem 0 0;
+    }
+}
+
+#archive-feature-image {
+    flex: 1;
+    margin-right: 0.6rem;
+}
+
+#archive-feature-text {
+    flex: 4;
+}
+
 /*
 =====================================
 Feature Archives :: Full Article Page
@@ -119,9 +123,13 @@ section.full-article-page {
     padding-top: 1rem;
 }
 
-.back-to-archive {
-    color: #fff;
-    font-weight: 600;
+#full-feature-article {
+    
+    p.archive-date {
+        font-size: 0.8rem;
+        margin: 0.5rem 0 2rem;
+    }
+
 }
 
 /*

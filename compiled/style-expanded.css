@@ -1679,7 +1679,6 @@ a#mag-issuu {
 }
 
 /*
-================================
 Feature Archives :: Summary Page
 ================================
 */
@@ -1692,18 +1691,6 @@ Feature Archives :: Summary Page
   background-color: #F0F8FF;
   flex: 1 1 100%;
   padding: 1.8rem 1.5rem;
-}
-
-.archive-summary-container {
-  flex: 1;
-}
-
-.archive-summary-container:nth-child(odd) {
-  margin-right: 0;
-}
-
-div.feature-summary h3 {
-  margin: 1rem 0 0.35rem;
 }
 
 #search-field {
@@ -1765,6 +1752,31 @@ select.archive-sort {
     clear: left;
   }
 }
+.archive-summary-container {
+  flex: 1;
+}
+
+.feature-summary {
+  border-bottom: 1px solid #dedede;
+  margin: 2rem 0 0 0;
+}
+.feature-summary h2.entry-title {
+  font-size: 1.3rem;
+}
+.feature-summary p.archive-date {
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0;
+}
+
+#archive-feature-image {
+  flex: 1;
+  margin-right: 0.6rem;
+}
+
+#archive-feature-text {
+  flex: 4;
+}
+
 /*
 =====================================
 Feature Archives :: Full Article Page
@@ -1776,9 +1788,9 @@ section.full-article-page {
   padding-top: 1rem;
 }
 
-.back-to-archive {
-  color: #fff;
-  font-weight: 600;
+#full-feature-article p.archive-date {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 2rem;
 }
 
 /*
@@ -1934,6 +1946,112 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
 .pressrelease-summary p.archive-date {
   font-size: 0.8rem;
   margin: 0.25rem 0 0;
+}
+
+#full-press-article p.archive-date {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.page-id-1883 .page-header {
+  border-bottom: 1px solid #dedede;
+}
+.page-id-1883 .block-type-content .hentry {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.archive-content h3 {
+  margin: 0 0 1rem;
+}
+
+.archive-container {
+  margin-bottom: 1.25rem;
+}
+.archive-container h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+#archive-categories,
+#archive-wfc-features,
+#archive-wfc-press {
+  justify-content: space-between;
+}
+#archive-categories li.cat-item,
+#archive-wfc-features li.cat-item,
+#archive-wfc-press li.cat-item {
+  border: 1px solid #dedede;
+  flex: 0 250px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#archive-categories li.cat-item:hover,
+#archive-wfc-features li.cat-item:hover,
+#archive-wfc-press li.cat-item:hover {
+  border-color: #f0b252;
+}
+#archive-categories li.cat-item a,
+#archive-wfc-features li.cat-item a,
+#archive-wfc-press li.cat-item a {
+  display: block;
+  padding: 0.5rem;
+}
+#archive-categories li.cat-item a:hover,
+#archive-wfc-features li.cat-item a:hover,
+#archive-wfc-press li.cat-item a:hover {
+  background-color: #f0b252;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 1180px) {
+  #archive-categories li.cat-item,
+  #archive-wfc-features li.cat-item,
+  #archive-wfc-press li.cat-item {
+    flex: 0 225px;
+  }
+}
+@media screen and (max-width: 1031px) {
+  #archive-categories,
+  #archive-wfc-features,
+  #archive-wfc-press {
+    justify-content: flex-start;
+  }
+  #archive-categories li.cat-item,
+  #archive-wfc-features li.cat-item,
+  #archive-wfc-press li.cat-item {
+    margin: 0 0.75rem 0.75rem 0;
+  }
+}
+@media screen and (max-width: 737px) {
+  #archive-categories li.cat-item,
+  #archive-wfc-features li.cat-item,
+  #archive-wfc-press li.cat-item {
+    flex: 1 100%;
+    margin: 0 0 0.75rem 0;
+  }
+}
+/*
+Archive Category Page
+=====================*/
+#block-bj6563bcf6642955 h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 120%;
+}
+#block-bj6563bcf6642955 .more-link {
+  background-color: transparent;
+  color: #f0b252;
+  font-style: italic;
+}
+#block-bj6563bcf6642955 .more-link::after {
+  content: " >";
+  display: inline-block;
+  padding-left: 0.5rem;
 }
 
 .tribe-events-before-html {
