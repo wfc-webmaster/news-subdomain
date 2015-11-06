@@ -179,124 +179,6 @@ a:hover {
 }
 
 /*
-=======
-Globals
-=======
-*/
-body {
-  background-color: #fff;
-}
-
-.home .loop {
-  padding: 1rem 0 0;
-}
-
-.page-header {
-  margin-bottom: 1.5rem;
-}
-.page-header h1 {
-  margin-top: 0;
-}
-
-.social-media-container {
-  display: table;
-  float: right;
-  font-size: 1.2rem;
-}
-.social-media-container ul {
-  display: inline-flex;
-  margin: 1rem 0;
-}
-.social-media-container li {
-  margin-right: 1.1rem;
-}
-.social-media-container li:last-child {
-  margin-right: 0;
-}
-
-@media screen and (max-width: 1024px) {
-  #news-page-top h1 {
-    margin-bottom: 0;
-  }
-
-  .social-media-container {
-    clear: both;
-    float: left;
-  }
-}
-@media screen and (max-width: 1180px) {
-  .mobile-padding {
-    padding: 0 1.5rem;
-  }
-}
-.block-type-breadcrumbs p.breadcrumbs {
-  border: 1px solid #dedede;
-  display: inline-block;
-  font-size: 0.75rem;
-  margin: 0;
-  padding: 0.5rem 0.8rem;
-}
-
-p.breadcrumbs span.sep {
-  margin: 0 0.3rem;
-}
-
-ul#post-sharebar li {
-  display: inline-block;
-  font-size: 0.85rem;
-  margin-right: 1.5rem;
-}
-ul#post-sharebar li:last-child {
-  margin-right: 0;
-}
-ul#post-sharebar i {
-  color: #f0b252;
-}
-ul#post-sharebar i.fa-google-plus {
-  font-weight: 600;
-}
-ul#post-sharebar a {
-  color: inherit;
-}
-
-.sharebar-icons {
-  margin-right: 0.4rem;
-}
-
-.post-sharebar-wrapper {
-  border-top: 1px dashed #dedede;
-  border-bottom: 1px dashed #dedede;
-  margin-top: 1.4rem;
-  padding: 0.65rem;
-  text-align: center;
-}
-
-@media screen and (max-width: 535px) {
-  .social-media-name {
-    display: none;
-  }
-
-  ul#post-sharebar i {
-    font-size: 1.25rem;
-  }
-}
-figcaption.wp-caption-text {
-  color: inherit;
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-.flex-container-row {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.flex-container-column {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-/*
 ========
 Elements
 ========
@@ -456,8 +338,6 @@ Elements
 }
 
 /*
-
-/*
 ==========
 Navigation
 ==========
@@ -552,77 +432,42 @@ div#header-nav {
     left: 94%;
   }
 }
-#mobile-menu-wrap {
-  bottom: 0;
+/*New Mobile Navigation
+-----------------------*/
+#mobile-nav {
   color: #fff;
-  display: none;
-  left: 0;
-  overflow-y: auto;
-  position: fixed;
-  right: 0;
-  text-align: center;
-  top: 0;
-  z-index: 1000;
-  -webkit-overflow-scrolling: touch;
+  flex: 0 18rem;
 }
-#mobile-menu-wrap a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#mobile-menu-wrap.show-menu {
-  display: inline-block;
-}
-
-.mobile-menu-container {
-  border-top: 1px solid #fff;
-  float: left;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-  text-align: left;
-  width: 50%;
-}
-
-.mobile-menu-container:nth-child(-n+2) {
-  border: none;
-}
-
-#mobile-menu-centering {
-  display: table;
-  width: 85%;
-  margin: 0 auto;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.mobile-subnav-list {
-  margin: 1rem 0 0 2.5rem;
-}
-.mobile-subnav-list li a {
+#mobile-nav li {
+  border: 1px solid;
   font-size: 1.2rem;
-  line-height: 175%;
+  font-weight: 600;
+  list-style-type: none;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+}
+#mobile-nav li a {
+  display: block;
+  padding: 0.8rem;
+}
+#mobile-nav li a:hover {
+  text-decoration: none !important;
+}
+#mobile-nav li:first-of-type {
+  border: none;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  text-transform: none;
 }
 
-#mobile-search form {
-  margin-top: 1.3rem;
-}
-#mobile-search input {
-  float: left;
-  width: 100%;
-}
-#mobile-search button {
-  background-color: #ed6322;
-  border: none;
-  color: #fff;
-  font-size: inherit;
-  padding: 0.35rem 0.75rem;
-  width: auto;
-  clear: left;
-  float: left;
-  margin-top: 0.75rem;
-}
-#mobile-search .mobile-subnav input[placeholder] {
-  font-size: 0.9rem;
+#mobile-menu-overlay.show-menu {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 .block-type-content div.loop-navigation div.nav-previous a,
@@ -660,6 +505,124 @@ div#post-nav-callout {
 
 #prev-2 {
   margin: 1.5rem 0 0 0;
+}
+
+/*
+=======
+Globals
+=======
+*/
+body {
+  background-color: #fff;
+}
+
+.home .loop {
+  padding: 1rem 0 0;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+.page-header h1 {
+  margin-top: 0;
+}
+
+.social-media-container {
+  display: table;
+  float: right;
+  font-size: 1.2rem;
+}
+.social-media-container ul {
+  display: inline-flex;
+  margin: 1rem 0;
+}
+.social-media-container li {
+  margin-right: 1.1rem;
+}
+.social-media-container li:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  #news-page-top h1 {
+    margin-bottom: 0;
+  }
+
+  .social-media-container {
+    clear: both;
+    float: left;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .mobile-padding {
+    padding: 0 1.5rem;
+  }
+}
+.block-type-breadcrumbs p.breadcrumbs {
+  border: 1px solid #dedede;
+  display: inline-block;
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+}
+
+p.breadcrumbs span.sep {
+  margin: 0 0.3rem;
+}
+
+ul#post-sharebar li {
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-right: 1.5rem;
+}
+ul#post-sharebar li:last-child {
+  margin-right: 0;
+}
+ul#post-sharebar i {
+  color: #f0b252;
+}
+ul#post-sharebar i.fa-google-plus {
+  font-weight: 600;
+}
+ul#post-sharebar a {
+  color: inherit;
+}
+
+.sharebar-icons {
+  margin-right: 0.4rem;
+}
+
+.post-sharebar-wrapper {
+  border-top: 1px dashed #dedede;
+  border-bottom: 1px dashed #dedede;
+  margin-top: 1.4rem;
+  padding: 0.65rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 535px) {
+  .social-media-name {
+    display: none;
+  }
+
+  ul#post-sharebar i {
+    font-size: 1.25rem;
+  }
+}
+figcaption.wp-caption-text {
+  color: inherit;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.flex-container-row {
+  display: flex !important;
+  flex-flow: row wrap;
+}
+
+.flex-container-column {
+  display: flex !important;
+  flex-flow: column wrap;
 }
 
 /*
@@ -1689,7 +1652,6 @@ Feature Archives :: Summary Page
 #archive-search {
   border: 1px solid #dedede;
   background-color: #F0F8FF;
-  flex: 1 1 100%;
   padding: 1.8rem 1.5rem;
 }
 

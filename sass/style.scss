@@ -37,13 +37,6 @@ Typography
 @import 'mixins/_responsive.scss';
 @import 'typography/_typography.scss';
 
-/*
-=======
-Globals
-=======
-*/
-@import 'globals/_globals.scss';
-@import 'globals/_flex.scss';
 
 /*
 ========
@@ -55,13 +48,19 @@ Elements
 @import 'elements-site/_sidebars.scss';
 
 /*
-
-/*
 ==========
 Navigation
 ==========
 */
 @import 'navigation/_navigation.scss';
+
+/*
+=======
+Globals
+=======
+*/
+@import 'globals/_globals.scss';
+@import 'globals/_flex.scss';
 
 /*
 =======

@@ -17,10 +17,10 @@
 	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction">
 		<div class="row panel-body">
 			<div class="pressrelease-summary">
-				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">{{pressrelease.name}}</a></h2>				
+				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">{{pressrelease.name}}</a></h2>				
 				<p class="archive-date">{{pressrelease.datereleased | date:'longDate'}}</p>
 				<p ng-bind-html="pressrelease.summary"></p>
-				<p><a href="http://localhost:8888/wildflower_news/news/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
+				<p><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
 			</div>					
 		</div>
 	</a>

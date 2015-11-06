@@ -10,6 +10,27 @@ function remove_content_styling() {
 }
 add_action('headway_setup_child_theme', 'remove_content_styling');
 
+//Add mobile menu
+function mobile_menu() {
+	register_nav_menu ('primary-mobile', __( 'Navigation Mobile', 'Headway - Wildflower News' ));
+}
+add_action( 'after_setup_theme', 'mobile_menu' );
+
+//Add search function to mobile nav
+add_filter('wp_nav_menu_items','add_search_box', 10, 2);
+function add_search_box($items, $args) {
+	
+        ob_start();
+        get_search_form();
+        $searchform = ob_get_contents();
+        ob_end_clean();
+
+        $items .= '<li>' . $searchform . '</li>';
+
+    return $items;
+	
+}
+
 //Add categories above titles
 function add_categories_above_title() {
 	if ( is_front_page() || is_page('1801')) {
