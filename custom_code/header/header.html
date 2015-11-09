@@ -17,7 +17,14 @@
 			</ul>
 		</div>
 		<div id="header-nav">
-			<?php wp_nav_menu( array('menu' => 'Main Nav', 'container' => false )); ?>
+			<?php 
+				$main_args = array(
+					'theme_location' => 'wfc-main-nav',
+					'container' => false 
+					);
+				
+				wp_nav_menu($main_args);
+			?>
 		</div>
 
 		<div id="mobile-menu-btn">
@@ -36,12 +43,12 @@
 		</div>
 
 		<div id="mobile-menu-overlay">
+			<!-- Creates a custom nav displayed on mobile devices -->
 			<div id="mobile-nav">
 				<?php 
 
-				$args = array( 
-
-					'theme_location' => 'primary mobile',
+				$mobile_args = array( 
+					'theme_location' => 'wfc-mobile-nav',
 					'menu_class' => 'nav-menu flex-container-column',
 					'container' => false,
 					'items_wrap' => 
@@ -49,7 +56,7 @@
 					);
 
 					if ( wp_is_mobile() ) {
-						wp_nav_menu($args);
+						wp_nav_menu($mobile_args);
 					}
 				?>
 			</div>

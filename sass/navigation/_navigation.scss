@@ -184,6 +184,7 @@ div#header-nav {
       font-weight: 600;
       list-style-type: none;
       margin: 0 0 1.5rem;
+      overflow: hidden;
       text-transform: uppercase;
     }
 
@@ -203,7 +204,23 @@ div#header-nav {
       margin-top: 3rem;
       text-transform: none;
     }
+
+    #mobile-search {
+        border: none;
+
+        label.assistive-text {
+          display: none;
+        }
+
+        input#s {
+          color: $wfc-gray;
+          font-size: 1rem;          
+          padding: 0.95rem;
+          width: 100%;
+      }
+    }
 }
+
 
 #mobile-menu-overlay.show-menu {
     align-items: flex-start;
