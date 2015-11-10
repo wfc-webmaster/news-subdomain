@@ -26,13 +26,14 @@ function add_search_box($items, $args) {
 
 	if ($args->theme_location == 'wfc-mobile-nav') {
 	
-        ob_start();
+        /*ob_start();
         get_search_form();
         $searchform = ob_get_contents();
-        ob_end_clean();
+        ob_end_clean();*/
 
-        $items .= '<li id="mobile-search" class="menu-item menu-item-type-post_type menu-item-object-page">' . $searchform . '</li>';
+        $search_args = 'Search Wildflower News';
 
+        $items .= '<li id="mobile-search" class="menu-item menu-item-type-post_type menu-item-object-page">' . headway_get_search_form($search_args) . '</li>';
     }
     return $items;
 	

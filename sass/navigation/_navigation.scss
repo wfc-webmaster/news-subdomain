@@ -70,15 +70,22 @@ div#header-nav {
 
 #menu-btn {
     background-color: rgba(0,0,0,0.5);
+    color: $wfc-white;
+    font-size: 1.7rem;
     padding: 5px;
-  
-  span {
+
+  #close-x {
+    font-size: 2.2rem;
+  }
+    
+  #close-x,
+  #open-menu.hide {
+    display: none;
+  }
+
+  #open-menu,
+  #close-x.show-x {
     display: block;
-    width: 22px;
-    height: 3px;
-    margin: 4px 0;
-    background: $wfc-white;
-    z-index: 999;
   }
 }
 
@@ -176,6 +183,8 @@ div#header-nav {
 
 #mobile-nav {
     color: $wfc-white;
+    display: flex;
+    flex-flow: column;
     flex: 0 18rem;
     
     li {
@@ -197,27 +206,33 @@ div#header-nav {
       text-decoration: none !important;
     }
 
-    li:first-of-type {
+    li#nav-menu-title {
       border: none;
       font-size: 2rem;
       font-weight: 600;
       margin-top: 3rem;
+      order: -2;
       text-transform: none;
     }
 
     #mobile-search {
         border: none;
+        order: -1;
 
         label.assistive-text {
           display: none;
         }
 
         input#s {
+          border: none;
           color: $wfc-gray;
           font-size: 1rem;          
-          padding: 0.95rem;
+          padding: 1rem;
           width: 100%;
       }
+        input.submit {
+          display: none;
+        }
     }
 }
 

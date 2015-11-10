@@ -407,15 +407,20 @@ div#header-nav {
 
 #menu-btn {
   background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.7rem;
   padding: 5px;
 }
-#menu-btn span {
+#menu-btn #close-x {
+  font-size: 2.2rem;
+}
+#menu-btn #close-x,
+#menu-btn #open-menu.hide {
+  display: none;
+}
+#menu-btn #open-menu,
+#menu-btn #close-x.show-x {
   display: block;
-  width: 22px;
-  height: 3px;
-  margin: 4px 0;
-  background: #fff;
-  z-index: 999;
 }
 
 #menu-btn.menu-btn-nocolor {
@@ -436,6 +441,8 @@ div#header-nav {
 -----------------------*/
 #mobile-nav {
   color: #fff;
+  display: flex;
+  flex-flow: column;
   flex: 0 18rem;
 }
 #mobile-nav li {
@@ -454,24 +461,30 @@ div#header-nav {
 #mobile-nav li a:hover {
   text-decoration: none !important;
 }
-#mobile-nav li:first-of-type {
+#mobile-nav li#nav-menu-title {
   border: none;
   font-size: 2rem;
   font-weight: 600;
   margin-top: 3rem;
+  order: -2;
   text-transform: none;
 }
 #mobile-nav #mobile-search {
   border: none;
+  order: -1;
 }
 #mobile-nav #mobile-search label.assistive-text {
   display: none;
 }
 #mobile-nav #mobile-search input#s {
+  border: none;
   color: #4d4d4d;
   font-size: 1rem;
-  padding: 0.95rem;
+  padding: 1rem;
   width: 100%;
+}
+#mobile-nav #mobile-search input.submit {
+  display: none;
 }
 
 #mobile-menu-overlay.show-menu {
@@ -531,6 +544,10 @@ body {
 
 .home .loop {
   padding: 1rem 0 0;
+}
+
+input {
+  -webkit-appearance: none;
 }
 
 .page-header {
