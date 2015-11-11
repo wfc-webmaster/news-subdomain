@@ -40,6 +40,24 @@ function add_search_box($items, $args) {
 }
 add_filter('wp_nav_menu_items','add_search_box', 10, 2);
 
+//Add social media icons to mobile nav
+function add_social_icons($items, $args) {
+
+	$icons = '<ul id="mobile-social-icons-wrap">
+				<li><a href="http://www.facebook.com/wildflowercenter" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="http://twitter.com/WildflowerCtr" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="http://instagram.com/wildflowercenter" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://www.pinterest.com/wildflowerctr/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+				<li><a href="http://www.flickr.com/photos/wildflowercenter" target="_blank"><i class="fa fa-flickr"></i></a></li>
+				</ul>';
+
+	if ($args->theme_location == 'wfc-mobile-nav') {
+		$items .= '<li id="mobile-social-icons" class="menu-item menu-item-type-post_type menu-item-object-page">' . $icons . '</li>';
+	}
+	return $items;
+}
+add_filter('wp_nav_menu_items','add_social_icons', 10, 2);
+
 //Add categories above titles
 function add_categories_above_title() {
 	if ( is_front_page() || is_page('1801')) {

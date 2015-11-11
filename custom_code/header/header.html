@@ -30,7 +30,6 @@
 		<div id="mobile-menu-btn">
 			<div id="menu-btn">
 				<div id="open-menu"<i class="fa fa-bars"></i></div>
-				<div id="close-x"><i class="fa fa-times"></i></div>
 			</div>
 		</div>
 
@@ -51,7 +50,7 @@
 					'menu_class' => 'nav-menu flex-container-column',
 					'container' => false,
 					'items_wrap' => 
-						'<li id="nav-menu-title" class="menu-item menu-item-type-post_type menu-item-object-page">Wildflower News</li>%3$s'
+						'<li id="nav-menu-close" class="menu-item menu-item-type-post_type menu-item-object-page"><div id="close-x"><i class="fa fa-times"></i></div></li><li id="nav-menu-title" class="menu-item menu-item-type-post_type menu-item-object-page">Wildflower News</li>%3$s'
 					);
 
 					if ( wp_is_mobile() ) {

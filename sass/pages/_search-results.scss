@@ -1,0 +1,18 @@
+#block-b455643bc8d0503a {
+	h3 {
+		font-size: 1.3rem;
+		font-weight: 900;
+    	line-height: 120%;
+	}
+
+	.more-link {
+	    background-color: transparent;
+	    color: #f0b252;
+	    font-style: italic;
+	}
+	.more-link:after {
+		content: " >";
+	    display: inline-block;
+	    padding-left: 0.5rem;
+	}
+}

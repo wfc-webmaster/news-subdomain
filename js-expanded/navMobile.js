@@ -2,25 +2,14 @@
 jQuery(document).ready(function($) {
 
 	$('#mobile-menu-btn').click(function() {
-		$(this).toggleClass('return-body');
-		$('#whitewrap').toggleClass('no-scroll');
-		$('#menu-btn').toggleClass('menu-btn-nocolor');
-		$('#open-menu').toggleClass('hide');
-		$('#close-x').toggleClass('show-x');
-		//$('#mobile-menu-overlay').toggleClass('expand');
-		$('#mobile-menu-overlay').toggleClass('flex-container-row show-menu');
-		//$('#mobile-nav').toggleClass('show-menu');
+		$('#menu-btn').addClass('menu-btn-nocolor');
+		$('#open-menu').addClass('hide');
+		$('#mobile-menu-overlay').addClass('flex-container-row show-menu');
 	});
 
-	$('#mobile-menu-btn').click(function() {
-		if ($('#mobile-menu-btn').hasClass('return-body')) {
-			//console.log('Has class');
-			$('body').on('touchmove', function (e) {
-				if (!$('.show-menu').has($(e.target)).length) e.preventDefault();
-			});
-		} else {
-			//console.log('No class');
-			$('body').off();
-		};
-	});
+	$('#mobile-nav li#nav-menu-close #close-x i').click(function() {
+		$('#menu-btn').removeClass('menu-btn-nocolor');
+		$('#open-menu').removeClass('hide');
+		$('#mobile-menu-overlay').removeClass('flex-container-row show-menu');
+	});	
 });
