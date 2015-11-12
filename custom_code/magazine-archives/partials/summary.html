@@ -1,0 +1,29 @@
+<section class="summary-page flex-container-column">
+	<div id="archive-search" class="flex-container-row">
+		<label id="search-field">Search: <input class="search-archives" placeholder="Search past magazine articles" ng-model="searchMagazineIssues" autofocus></label>
+		<label class="search-sort">Sort by: 
+			<select class="archive-sort" ng-model="orderMagazineIssues">
+				<option value="id">Date</option>
+				<option value="name">Title</option>
+			</select>
+		</label>
+		<label class="search-sort">Ascending
+			<input type="radio" ng-model="direction" name="direction">
+		</label>
+		<label class="search-sort">Descending
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
+		</label>	
+	</div>
+
+	<div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat="magazineissue in magazineissues | filter:searchMagazineIssues | orderBy:orderMagazineIssues:direction">
+		<div class="row panel-body">
+			<div class="magazineissue-summary">
+				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}">{{magazineissue.name}}</a></h2>				
+				<p class="archive-date">{{magazineissue.issue | date:'longDate'}}</p>
+				
+				<p><a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
+			</div>					
+		</div>
+	</div>
+
+</section>
