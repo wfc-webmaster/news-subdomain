@@ -4,7 +4,7 @@
         $db_name  = 'wfc_webdev';		
         $hostname = 'mysqldb.its.utexas.edu';		
         $username = 'wildflow';		
-        $password = 'pKMhU27eWTaFKPMS';		
+        $password = '';		
 		
         // connect to the database		
         $dbh = new PDO("mysql:host=$hostname;dbname=$db_name;charset=utf8", $username, $password);
