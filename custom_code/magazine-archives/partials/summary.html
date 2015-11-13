@@ -14,16 +14,16 @@
 			<input type="radio" ng-model="direction" name="direction" value="reverse">
 		</label>	
 	</div>
-
-	<div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat="magazineissue in magazineissues | filter:searchMagazineIssues | orderBy:orderMagazineIssues:direction">
+	<div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat-start="magazineissue in magazineissues | filter:searchMagazineIssues | orderBy:orderMagazineIssues:direction">
 		<div class="row panel-body">
 			<div class="magazineissue-summary">
-				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}">{{magazineissue.name}}</a></h2>				
-				<p class="archive-date">{{magazineissue.issue | date:'longDate'}}</p>
 				
-				<p><a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
+				<h2 class="entry-title">Issue: {{magazineissue.issue}}</h2>				
+				<p>Volume: {{magazineissue.volume}}</p>
+				<div ng-repeat="story in magazineissue.stories">Name: {{story.name}}</div>
 			</div>					
 		</div>
 	</div>
+	<div ng-repeat-end><br /></div>
 
 </section>
