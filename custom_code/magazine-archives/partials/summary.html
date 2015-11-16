@@ -1,25 +1,28 @@
 <section class="summary-page flex-container-column">
 	<div id="archive-search" class="flex-container-row">
-		<label id="search-field">Search: <input class="search-archives" placeholder="Search past magazine articles" ng-model="searchMagazineIssues" autofocus></label>
-		<label class="search-sort">Sort by: 
-			<select class="archive-sort" ng-model="orderMagazineIssues">
-				<option value="id">Date</option>
-				<option value="name">Title</option>
+		<label class="search-sort">Select Issue
+			<select ng-model="filterMagazineIssues" ng-options="magazineissue.issue as magazineissue.issue for magazineissue in magazineissues | orderBy:['-volume', '-number']:direction">
+				<option value="">- Show All -</option>
 			</select>
 		</label>
+
 		<label class="search-sort">Ascending
-			<input type="radio" ng-model="direction" name="direction">
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
 		</label>
 		<label class="search-sort">Descending
-			<input type="radio" ng-model="direction" name="direction" value="reverse">
+			<input type="radio" ng-model="direction" name="direction" value="">
 		</label>	
 	</div>
-	<div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat-start="magazineissue in magazineissues | filter:searchMagazineIssues | orderBy:orderMagazineIssues:direction">
+	<!-- <div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat-start="magazineissue in magazineissues | filter:searchMagazineIssues | orderBy:magNumber"> -->
+
+	<div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat-start="magazineissue in magazineissues | filter:filterMagazineIssues | orderBy:['-volume', '-number']:direction">
+
 		<div class="row panel-body">
 			<div class="magazineissue-summary">
 				
 				<h2 class="entry-title">Issue: {{magazineissue.issue}}</h2>				
 				<p>Volume: {{magazineissue.volume}}</p>
+				<p>Number: {{magazineissue.number}}</p>
 				<div ng-repeat="story in magazineissue.stories">Name: {{story.name}}</div>
 			</div>					
 		</div>
