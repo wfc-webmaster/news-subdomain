@@ -11,13 +11,17 @@ magazineControllers.controller("SummaryController", function($scope, $http, $tim
                 $scope.filterMagazineIssues = undefined;
             }
         });
+
     });
 });
 
-magazineControllers.controller("FullArticleController", function($scope, $http, $timeout, $routeParams){
+magazineControllers.controller("FullArticleController", function($scope, $http, $timeout, $routeParams, $location){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/magazine-archives/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.magazineissues = data;
-        $scope.whichItem = $routeParams.itemId;
+        $scope.whichArticle = $routeParams.magArticle;
+        $scope.whichIssue = $routeParams.magIssue;
+        console.log($routeParams);        
+        console.log($location);        
     });
 });

@@ -1,0 +1,13 @@
+.mag-story-list {
+    margin-bottom: 1rem;
+}
+
+.magazineissue-summary {
+	flex: 4;
+}
+
+@media screen and (max-width: 1024px) {
+	.magazineissue-summary {
+		flex: 2;
+	}
+}

@@ -53,7 +53,7 @@ select.archive-sort {
 }
 
 @media screen and (max-width: 861px) {
-   .archive-summary-container {
+   .archive-summary-containe {
         margin-right: 0;
         width: 100%
     }
@@ -84,6 +84,7 @@ select.archive-sort {
 }
 
 .archive-summary-container {
+    align-items: flex-start;
     flex: 1;
 }
 
@@ -101,12 +102,12 @@ select.archive-sort {
     }
 }
 
-#archive-feature-image {
+.archive-feature-image {
     flex: 1;
     margin-right: 0.6rem;
 }
 
-#archive-feature-text {
+.archive-feature-text {
     flex: 4;
 }
 

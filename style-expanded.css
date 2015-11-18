@@ -1794,7 +1794,7 @@ select.archive-sort {
 }
 
 @media screen and (max-width: 861px) {
-  .archive-summary-container {
+  .archive-summary-containe {
     margin-right: 0;
     width: 100%;
   }
@@ -1817,6 +1817,9 @@ select.archive-sort {
   }
 }
 .archive-summary-container {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1834,14 +1837,14 @@ select.archive-sort {
   margin: 0.25rem 0 0;
 }
 
-#archive-feature-image {
+.archive-feature-image {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-right: 0.6rem;
 }
 
-#archive-feature-text {
+.archive-feature-text {
   -webkit-flex: 4;
       -ms-flex: 4;
           flex: 4;
@@ -2025,6 +2028,23 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
   margin: 0.5rem 0 2rem;
 }
 
+.mag-story-list {
+  margin-bottom: 1rem;
+}
+
+.magazineissue-summary {
+  -webkit-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+@media screen and (max-width: 1024px) {
+  .magazineissue-summary {
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
 .page-id-1883 .page-header {
   border-bottom: 1px solid #dedede;
 }
@@ -2047,14 +2067,16 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
 
 #archive-categories,
 #archive-wfc-features,
-#archive-wfc-press {
+#archive-wfc-press,
+#archive-wfc-magazine {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 #archive-categories li.cat-item,
 #archive-wfc-features li.cat-item,
-#archive-wfc-press li.cat-item {
+#archive-wfc-press li.cat-item,
+#archive-wfc-magazine li.cat-item {
   border: 1px solid #dedede;
   -webkit-flex: 0 250px;
       -ms-flex: 0 250px;
@@ -2067,18 +2089,21 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
 }
 #archive-categories li.cat-item:hover,
 #archive-wfc-features li.cat-item:hover,
-#archive-wfc-press li.cat-item:hover {
+#archive-wfc-press li.cat-item:hover,
+#archive-wfc-magazine li.cat-item:hover {
   border-color: #f0b252;
 }
 #archive-categories li.cat-item a,
 #archive-wfc-features li.cat-item a,
-#archive-wfc-press li.cat-item a {
+#archive-wfc-press li.cat-item a,
+#archive-wfc-magazine li.cat-item a {
   display: block;
   padding: 0.5rem;
 }
 #archive-categories li.cat-item a:hover,
 #archive-wfc-features li.cat-item a:hover,
-#archive-wfc-press li.cat-item a:hover {
+#archive-wfc-press li.cat-item a:hover,
+#archive-wfc-magazine li.cat-item a:hover {
   background-color: #f0b252;
   color: #fff;
   text-decoration: none !important;

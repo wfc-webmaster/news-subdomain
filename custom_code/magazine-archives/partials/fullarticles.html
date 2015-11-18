@@ -1,9 +1,9 @@
 <section class="full-article-page">
 	<div id="prev-1" class="wfc-archive nav-previous"><a href="http://localhost:8888/wildflower_news/archive/magazine-archives">&laquo; Back To Magazine Articles</a></div>
 	<div id="full-magazine-article" ng-model="magazineissues">
-		<h1 class="entry-title">{{magazineissues[whichItem].name}}</h1>
-		<p class="archive-date">{{magazineissues[whichItem].issue | date:'longDate'}}</p>
-		<div ng-bind-html="magazineissues[whichItem].content"></div>		
+		<h1 class="entry-title">{{magazineissues[whichIssue].stories[whichArticle]['name']}}</h1>
+		<p class="archive-date">{{magazineissues[whichIssue].issue}}</p>
+		<div ng-bind-html="magazineissues[whichIssue].stories[whichArticle]['content']"></div>		
 	</div>
 	<div id="prev-2" class="wfc-archive nav-previous"><a href="http://localhost:8888/wildflower_news/archive/magazine-archives">&laquo; Back To Magazine Articles</a></div>
 </section>

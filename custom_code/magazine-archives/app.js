@@ -1,7 +1,4 @@
-var magazineArchive = angular.module('magazineArchive', [
-	'ngRoute',
-	'magazineControllers'
-]);
+var magazineArchive = angular.module('magazineArchive', ['ngRoute',	'magazineControllers']);
 
 magazineArchive.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
@@ -9,7 +6,7 @@ magazineArchive.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/magazine-archives/partials/summary.html',
 		controller: 'SummaryController'
 	}).
-	when('/fullarticles/:itemId', {
+	when('/fullarticles/:magIssue/:magArticle/:magTitle', {
 		templateUrl: 'http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/magazine-archives/partials/fullarticles.html',
 		controller: 'FullArticleController'
 	}).
@@ -17,3 +14,9 @@ magazineArchive.config(['$routeProvider', function($routeProvider) {
 		redirectTo: '/summary'
 	});
 }]);
+
+magazineArchive.filter('addhyphen', function(){
+	return function(input){
+		return input.replace(/ /g, '-');
+	};
+});

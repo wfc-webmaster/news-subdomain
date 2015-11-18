@@ -13,20 +13,21 @@
 			<input type="radio" ng-model="direction" name="direction" value="">
 		</label>	
 	</div>
-	<!-- <div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat-start="magazineissue in magazineissues | filter:searchMagazineIssues | orderBy:magNumber"> -->
-
-	<div id="magazineissue-{{magazineissue.id}}" class="archive-summary-container" ng-repeat-start="magazineissue in magazineissues | filter:filterMagazineIssues | orderBy:['-volume', '-number']:direction">
-
-		<div class="row panel-body">
+	
+	<div id="magissue-{{magazineissue.issue|addhyphen}}" class="archive-summary-container flex-container-row feature-summary" ng-repeat-start="magazineissue in magazineissues | filter:filterMagazineIssues | orderBy:['-volume', '-number']:direction">
+			<div class="archive-feature-image">
+			<img class="mag-archive-img" ng-src="//localhost:8888/wildflower_news/wp-content/uploads/2015/11/magazine-{{magazineissue.volume}}-{{magazineissue.number}}.jpg">
+			</div>
 			<div class="magazineissue-summary">
-				
-				<h2 class="entry-title">Issue: {{magazineissue.issue}}</h2>				
-				<p>Volume: {{magazineissue.volume}}</p>
-				<p>Number: {{magazineissue.number}}</p>
-				<div ng-repeat="story in magazineissue.stories">Name: {{story.name}}</div>
+				<h2 class="entry-title">{{magazineissue.issue}}</h2>				
+				<ul class="mag-story-list">				
+					<li ng-repeat="story in magazineissue.stories">
+						<a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}/{{magazineissue.stories.indexOf(story)}}/{{story.name|addhyphen}}">{{story.name}}</a>
+					</li>
+				</ul>
 			</div>					
-		</div>
+		
 	</div>
-	<div ng-repeat-end><br /></div>
+	<div ng-repeat-end></div>
 
 </section>

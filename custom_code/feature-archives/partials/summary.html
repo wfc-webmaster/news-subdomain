@@ -17,10 +17,10 @@
 	<div id="feature-{{feature.id}}" class="archive-summary-container" ng-repeat="feature in features | filter:searchFeatures | orderBy:orderFeatures:direction">
 		<div class="row panel-body">
 			<div class="feature-summary flex-container-row">
-				<div id="archive-feature-image">
+				<div class="archive-feature-image">
 					<a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}"><img width="150" ng-src="../_images/{{feature.image}}" alt="{{feature.title}} feature image"></a>
 				</div>
-				<div id="archive-feature-text">
+				<div class="archive-feature-text">
 					<h2 class="entry-title">
 					<a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}">
 					{{feature.title}}</h2></a>
