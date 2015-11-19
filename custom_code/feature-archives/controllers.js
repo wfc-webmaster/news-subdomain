@@ -13,6 +13,6 @@ featureControllers.controller("FullArticleController", function($scope, $http, $
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/feature-archives/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.features = data;
-        $scope.whichItem = $routeParams.itemId;
+        $scope.whichFeature = $routeParams.featureId;
     });
 });

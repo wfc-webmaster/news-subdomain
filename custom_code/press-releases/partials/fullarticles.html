@@ -1,9 +1,9 @@
 <section class="full-article-page">
 	<div id="prev-1" class="wfc-archive nav-previous"><a href="http://localhost:8888/wildflower_news/news/press-releases-archives">&laquo; Back To Press Releases</a></div>
 	<div id="full-press-article" ng-model="pressreleases">
-		<h1 class="entry-title">{{pressreleases[whichItem].name}}</h1>
-		<p class="archive-date">{{pressreleases[whichItem].datereleased | date:'longDate'}}</p>
-		<div ng-bind-html="pressreleases[whichItem].description"></div>		
+		<h1 class="entry-title">{{pressreleases[whichRelease].name}}</h1>
+		<p class="archive-date">{{pressreleases[whichRelease].datereleased | date:'longDate'}}</p>
+		<div ng-bind-html="pressreleases[whichRelease].description"></div>		
 	</div>
 	<div id="prev-2" class="wfc-archive nav-previous"><a href="http://localhost:8888/wildflower_news/news/press-releases-archives">&laquo; Back To Press Releases</a></div>
 </section>

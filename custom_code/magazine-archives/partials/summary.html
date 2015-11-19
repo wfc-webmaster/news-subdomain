@@ -22,7 +22,7 @@
 				<h2 class="entry-title">{{magazineissue.issue}}</h2>				
 				<ul class="mag-story-list">				
 					<li ng-repeat="story in magazineissue.stories">
-						<a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}/{{magazineissue.stories.indexOf(story)}}/{{story.name|addhyphen}}">{{story.name}}</a>
+						<a href="http://localhost:8888/wildflower_news/archive/magazine-archives/#/fullarticles/{{magazineissues.indexOf(magazineissue)}}/{{magazineissue.stories.indexOf(story)}}/{{story.name | specialchars | addhyphen | titlecase}}">{{story.name}}</a>
 					</li>
 				</ul>
 			</div>					

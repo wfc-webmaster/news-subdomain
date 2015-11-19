@@ -25,20 +25,14 @@
 	}
 }
 
-#archive-categories,
-#archive-wfc-features,
-#archive-wfc-press,
-#archive-wfc-magazine {
-	justify-content: space-between;
+.archive-grid {
+	justify-content: flex-start;
 
 	li.cat-item {
 		border: 1px solid $wfc-lightgray;
 		flex: 0 250px;
-	    font-size: 0.8rem;
-	    font-weight: 600;
-    	margin: 0 0 0.75rem 0;
+	    margin: 0 0.75rem 0.75rem 0;
 		text-align: center;
-		text-transform: uppercase;
 	}
 
 	li.cat-item:hover {
@@ -59,9 +53,7 @@
 
 @media screen and (max-width: 1180px) {
 
-	#archive-categories,
-	#archive-wfc-features,
-	#archive-wfc-press {
+	.archive-grid {
 
 		li.cat-item {
 			flex: 0 225px;
@@ -69,24 +61,9 @@
 	}
 }
 
-@media screen and (max-width: 1031px) {
-
-	#archive-categories,
-	#archive-wfc-features,
-	#archive-wfc-press {
-		justify-content: flex-start;
-
-		li.cat-item {
-			margin: 0 0.75rem 0.75rem 0;
-		}
-	}
-}
-
 @media screen and (max-width: 737px) {
 
-	#archive-categories,
-	#archive-wfc-features,
-	#archive-wfc-press {
+	.archive-grid {
 		
 		li.cat-item {
 			flex: 1 100%;

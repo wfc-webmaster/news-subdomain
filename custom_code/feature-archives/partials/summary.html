@@ -18,15 +18,15 @@
 		<div class="row panel-body">
 			<div class="feature-summary flex-container-row">
 				<div class="archive-feature-image">
-					<a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}"><img width="150" ng-src="../_images/{{feature.image}}" alt="{{feature.title}} feature image"></a>
+					<a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}/{{feature.title | specialchars | addhyphen | titlecase}}"><img width="150" ng-src="../_images/{{feature.image}}" alt="{{feature.title}} feature image"></a>
 				</div>
 				<div class="archive-feature-text">
 					<h2 class="entry-title">
-					<a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}">
+					<a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}/{{feature.title | specialchars | addhyphen | titlecase}}">
 					{{feature.title}}</h2></a>
 					<p class="archive-date">{{feature.date | date:'longDate'}}</p>
 					<p ng-bind-html="feature.summary"></p>
-					<p><a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
+					<p><a href="http://localhost:8888/wildflower_news/archive/features-archives/#/fullarticles/{{features.indexOf(feature)}}/{{feature.title | specialchars | addhyphen | titlecase}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
 				</div>
 			</div>					
 		</div>	

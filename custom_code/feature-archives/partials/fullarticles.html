@@ -1,9 +1,9 @@
 <section class="full-article-page">
 	<div id="prev-1" class="wfc-archive nav-previous"><a href="http://localhost:8888/wildflower_news/news/features-archives">&laquo; Back To Features</a></div>
 	<div id="full-feature-article" ng-model="features">
-		<h1 class="entry-title">{{features[whichItem].title}}</h1>
-		<p class="archive-date">{{features[whichItem].date | date:'longDate'}}</p>
-		<div ng-bind-html="features[whichItem].content_full"></div>		
+		<h1 class="entry-title">{{features[whichFeature].title}}</h1>
+		<p class="archive-date">{{features[whichFeature].date | date:'longDate'}}</p>
+		<div ng-bind-html="features[whichFeature].content_full"></div>		
 	</div>
 	<div id="prev-2" class="wfc-archive nav-previous"><a href="http://localhost:8888/wildflower_news/news/features-archives">&laquo; Back To Features</a></div>
 </section>

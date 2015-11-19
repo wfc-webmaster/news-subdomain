@@ -14,13 +14,21 @@
 			<input type="radio" ng-model="direction" name="direction" value="reverse">
 		</label>	
 	</div>
-	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction">
+
+	// Pagination buttons
+	<button ng-repeat="i in getNumberAsArray(numberOfPages()) track by $index" ng-click="setCurrentPage($index)">{{$index + 1}}</button>
+
+	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | startFrom:0">
+
+<!-- 	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction | startFrom: currentPage * pageSize | limitTo: pageSize"> -->
+		<p>Current page: {{currentPage + 1}}</p>
+		<p>Page size: {{pageSize}}</p>
 		<div class="row panel-body">
 			<div class="pressrelease-summary">
-				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}">{{pressrelease.name}}</a></h2>				
+				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}/{{pressrelease.name | specialchars | addhyphen | titlecase}}">{{pressrelease.name}}</a></h2>				
 				<p class="archive-date">{{pressrelease.datereleased | date:'longDate'}}</p>
 				<p ng-bind-html="pressrelease.summary"></p>
-				<p><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
+				<p><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}/{{pressrelease.name | specialchars | addhyphen | titlecase}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
 			</div>					
 		</div>
 	</a>

@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-	$.get("../wp-content/themes/wildflowercenter/custom_code/news-page/magazine-callout/magazine-test.php", function(magData) {
+	$.get("../wp-content/themes/wildflowercenter/custom_code/magazine-page/magazine-json.php", function(magData) {
 	    
 	    //Parse JSON from PHP file
 	    var parseFromPHP = jQuery.parseJSON(magData);

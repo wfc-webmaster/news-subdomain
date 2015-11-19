@@ -2011,69 +2011,35 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
   margin-bottom: 0.8rem;
 }
 
-#archive-categories,
-#archive-wfc-features,
-#archive-wfc-press,
-#archive-wfc-magazine {
-  justify-content: space-between;
+.archive-grid {
+  justify-content: flex-start;
 }
-#archive-categories li.cat-item,
-#archive-wfc-features li.cat-item,
-#archive-wfc-press li.cat-item,
-#archive-wfc-magazine li.cat-item {
+.archive-grid li.cat-item {
   border: 1px solid #dedede;
   flex: 0 250px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0.75rem 0.75rem 0;
   text-align: center;
-  text-transform: uppercase;
 }
-#archive-categories li.cat-item:hover,
-#archive-wfc-features li.cat-item:hover,
-#archive-wfc-press li.cat-item:hover,
-#archive-wfc-magazine li.cat-item:hover {
+.archive-grid li.cat-item:hover {
   border-color: #f0b252;
 }
-#archive-categories li.cat-item a,
-#archive-wfc-features li.cat-item a,
-#archive-wfc-press li.cat-item a,
-#archive-wfc-magazine li.cat-item a {
+.archive-grid li.cat-item a {
   display: block;
   padding: 0.5rem;
 }
-#archive-categories li.cat-item a:hover,
-#archive-wfc-features li.cat-item a:hover,
-#archive-wfc-press li.cat-item a:hover,
-#archive-wfc-magazine li.cat-item a:hover {
+.archive-grid li.cat-item a:hover {
   background-color: #f0b252;
   color: #fff;
   text-decoration: none !important;
 }
 
 @media screen and (max-width: 1180px) {
-  #archive-categories li.cat-item,
-  #archive-wfc-features li.cat-item,
-  #archive-wfc-press li.cat-item {
+  .archive-grid li.cat-item {
     flex: 0 225px;
   }
 }
-@media screen and (max-width: 1031px) {
-  #archive-categories,
-  #archive-wfc-features,
-  #archive-wfc-press {
-    justify-content: flex-start;
-  }
-  #archive-categories li.cat-item,
-  #archive-wfc-features li.cat-item,
-  #archive-wfc-press li.cat-item {
-    margin: 0 0.75rem 0.75rem 0;
-  }
-}
 @media screen and (max-width: 737px) {
-  #archive-categories li.cat-item,
-  #archive-wfc-features li.cat-item,
-  #archive-wfc-press li.cat-item {
+  .archive-grid li.cat-item {
     flex: 1 100%;
     margin: 0 0 0.75rem 0;
   }
