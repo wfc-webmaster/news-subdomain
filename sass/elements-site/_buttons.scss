@@ -57,3 +57,42 @@
         padding: 0.5rem;
     }
 }
+
+//Archive pagination buttons
+
+.page-button {
+    border: 1px solid $wfc-lightgray;
+    background-color: transparent;
+    flex: 1;
+    font-family: inherit;
+    -webkit-appearance: none;
+}
+
+.page-button:hover {
+    border-color: $wfc-lightorange;
+}
+
+.page-button:focus {
+    background: $wfc-lightorange;
+    color: $wfc-white;
+    outline: none;
+}
+
+.page-button.prev,
+.page-button.next,
+.page-button.last {
+    flex: 2;
+}
+
+#page-count-1 {
+    margin-bottom: 0;
+}
+
+.page-count {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+
+
+

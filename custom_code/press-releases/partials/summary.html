@@ -1,4 +1,4 @@
-<section class="summary-page flex-container-column">
+<section id="page-top" class="summary-page flex-container-column">
 	<div id="archive-search" class="flex-container-row">
 		<label id="search-field">Search: <input class="search-archives" placeholder="Search past press releases" ng-model="searchPressReleases" autofocus></label>
 		<label class="search-sort">Sort by: 
@@ -14,23 +14,27 @@
 			<input type="radio" ng-model="direction" name="direction" value="reverse">
 		</label>	
 	</div>
+	<p id="page-count-1" class="page-count">Page {{currentPage + 1}} of {{numberOfPages()}}</p>
+	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction | startFrom: currentPage*pageSize | limitTo: pageSize">
 
-	// Pagination buttons
-	<button ng-repeat="i in getNumberAsArray(numberOfPages()) track by $index" ng-click="setCurrentPage($index)">{{$index + 1}}</button>
+		
+		<div class="pressrelease-summary">
+			<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}/{{pressrelease.name | specialchars | addhyphen | titlecase}}">{{pressrelease.name}}</a></h2>				
+			<p class="archive-date">{{pressrelease.datereleased | date:'longDate'}}</p>
+			<p ng-bind-html="pressrelease.summary"></p>
+			<p><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}/{{pressrelease.name | specialchars | addhyphen | titlecase}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
+		</div>					
+		
 
-	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | startFrom:0">
-
-<!-- 	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction | startFrom: currentPage * pageSize | limitTo: pageSize"> -->
-		<p>Current page: {{currentPage + 1}}</p>
-		<p>Page size: {{pageSize}}</p>
-		<div class="row panel-body">
-			<div class="pressrelease-summary">
-				<h2 class="entry-title"><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}/{{pressrelease.name | specialchars | addhyphen | titlecase}}">{{pressrelease.name}}</a></h2>				
-				<p class="archive-date">{{pressrelease.datereleased | date:'longDate'}}</p>
-				<p ng-bind-html="pressrelease.summary"></p>
-				<p><a href="http://localhost:8888/wildflower_news/archive/press-releases-archives/#/fullarticles/{{pressreleases.indexOf(pressrelease)}}/{{pressrelease.name | specialchars | addhyphen | titlecase}}"><em>Read more</em></a> <span class="lightorange-spot">></span></p>
-			</div>					
-		</div>
-	</a>
+	</div>
+	
+	<p id="page-count-2" class="page-count">Page {{currentPage + 1}} of {{numberOfPages()}}</p>
+	<div class="archive-pagination">
+		<button class="page-button prev" ng-click="setCurrentPage(currentPage - 1); scrollToHash('whitewrap')">< Prev</button>
+		<button class="page-button" ng-repeat="page in pages | limitTo:10 track by $index" ng-click="setCurrentPage($index); scrollToHash('whitewrap')">
+			{{page}}
+		</button>
+		<button class="page-button next" ng-click="setCurrentPage(currentPage + 1); scrollToHash('whitewrap')">Next ></button>
+		<button class="page-button last" ng-click="setCurrentPage(pages[pages.length-2]); scrollToHash('whitewrap')">Last</button>
 	</div>
 </section>

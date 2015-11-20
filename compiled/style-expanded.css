@@ -239,6 +239,39 @@ Elements
   padding: 0.5rem;
 }
 
+.page-button {
+  border: 1px solid #dedede;
+  background-color: transparent;
+  flex: 1;
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+
+.page-button:hover {
+  border-color: #f0b252;
+}
+
+.page-button:focus {
+  background: #f0b252;
+  color: #fff;
+  outline: none;
+}
+
+.page-button.prev,
+.page-button.next,
+.page-button.last {
+  flex: 2;
+}
+
+#page-count-1 {
+  margin-bottom: 0;
+}
+
+.page-count {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 /** Text */
 .sidebar-heading p {
   font-size: 0.8rem;
@@ -2061,6 +2094,11 @@ Archive Category Page
   content: " >";
   display: inline-block;
   padding-left: 0.5rem;
+}
+
+.archive-pagination {
+  display: flex;
+  flex-direction: row;
 }
 
 .tribe-events-before-html {

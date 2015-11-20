@@ -1,6 +1,7 @@
 var pressArchive = angular.module('pressArchive', [
 	'ngRoute',
-	'pressControllers'
+	'pressControllers',
+	'wfcFilters'
 ]);
 
 pressArchive.config(['$routeProvider', function($routeProvider) {
@@ -39,42 +40,4 @@ pressArchive.directive('fullArticle', function($compile) {
 			console.log('Still works');			
 		}
 	};
-});
-
-// Start from filter
-pressArchive.filter('startFrom', function() {
-    return function(input, start) {         
-        console.log('Input: ' + input);
-        console.log('Start: ' + start);
-	};
-});
-
-// pressArchive.filter('startFrom', function() {
-//     return function(input, start) {         
-//         return input.slice(start);
-// 	};
-// });
-
-//Replace spaces with hyphen
-pressArchive.filter('addhyphen', function() {
-	return function(input){
-		return input.replace(/ /g, '-');
-	};
-});
-
-//Remove special characters
-pressArchive.filter('specialchars', function() {
-	return function(input){
-		return input.replace(/[&\/\\#,+()$~%.'":*?!<>{}]/g, "");
-	};
-});
-
-//Transform text to Title Case
-pressArchive.filter('titlecase', function() {
-    return function(s) {
-        s = ( s === undefined || s === null ) ? '' : s;
-        return s.toString().toLowerCase().replace( /\b([a-z])/g, function(ch) {
-            return ch.toUpperCase();
-        });
-    };
 });

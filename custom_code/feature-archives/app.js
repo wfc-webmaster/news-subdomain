@@ -1,6 +1,7 @@
 var featureArchive = angular.module('featureArchive', [
 	'ngRoute',
-	'featureControllers'
+	'featureControllers',
+	'wfcFilters'
 ]);
 
 featureArchive.config(['$routeProvider', function($routeProvider) {
@@ -39,28 +40,4 @@ featureArchive.directive('fullArticle', function($compile) {
 			console.log('Still works');			
 		}
 	};
-});
-
-//Replace spaces with hyphen
-featureArchive.filter('addhyphen', function(){
-	return function(input){
-		return input.replace(/ /g, '-');
-	};
-});
-
-//Remove special characters
-featureArchive.filter('specialchars', function(){
-	return function(input){
-		return input.replace(/[&\/\\#,+()$~%.'":*?!<>{}]/g, "");
-	};
-});
-
-//Transform text to Title Case
-featureArchive.filter('titlecase', function() {
-    return function(s) {
-        s = ( s === undefined || s === null ) ? '' : s;
-        return s.toString().toLowerCase().replace( /\b([a-z])/g, function(ch) {
-            return ch.toUpperCase();
-        });
-    };
 });

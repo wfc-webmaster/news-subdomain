@@ -95,3 +95,10 @@ Archive Category Page
 	    padding-left: 0.5rem;
 	}
 }
+
+//AngularJS pages pagination (Press Releases, Features Archives, Magazine Archives)
+
+.archive-pagination {
+    display: flex;
+    flex-direction: row;
+}
