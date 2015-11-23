@@ -11,9 +11,6 @@ pressControllers.controller("SummaryController", function($scope, $http, $timeou
         $scope.currentPage = 0;
         $scope.pageSize = 15;
 
-        $scope.setCurrentPage = function(currentPage) {
-            $scope.currentPage = currentPage;
-        };
 
         $scope.numberOfPages = function() {
             return Math.ceil($scope.pressreleases.length / $scope.pageSize);
@@ -26,12 +23,46 @@ pressControllers.controller("SummaryController", function($scope, $http, $timeou
             };
                 return numbers;
         };
-
-        $scope.scrollToHash = function(hashId) {
-            $location.hash(hashId);
-            $anchorScroll();
-            console.log('You Clicked It.');
+        
+        $scope.scrollToTop = function() {
+            $anchorScroll();            
         };
+
+        $scope.setCurrentPage = function(currentPage) {
+            $scope.currentPage = currentPage;
+
+            if ($scope.currentPage === -1) {
+                $scope.currentPage = 0;
+            };
+
+            if ($scope.currentPage >= $scope.pageLimit-1) {
+                $scope.currentPage = $scope.pageLimit-1;                       
+            };          
+        };
+
+        $scope.currentGoToPage = 1;
+
+        $scope.goToPage = 1;
+        
+        $scope.pageLimit = $scope.numberOfPages();
+
+        $scope.$watch('goToPage', function(newValue, oldValue){
+            
+            $scope.currentGoToPage = newValue;
+            
+            if ($scope.goToPage === null || $scope.goToPage < 1) {
+                $scope.goToPage = 1;
+            };
+
+            if ($scope.goToPage > $scope.pageLimit) {
+                $scope.goToPage = $scope.pageLimit;
+            };
+
+        });
+
+        $scope.$watch("currentGoToPage", function(newValue, oldValue) {
+                $scope.currentPage = newValue-1;
+            });
 
         $scope.pages = $scope.getNumberAsArray($scope.numberOfPages());        
     });

@@ -259,6 +259,7 @@ Elements
 
 .page-button.prev,
 .page-button.next,
+.page-button.first,
 .page-button.last {
   flex: 2;
 }
