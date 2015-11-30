@@ -12,8 +12,8 @@ pressControllers.controller("SummaryController", function($scope, $http, $timeou
         $scope.pageSize = 15;
 
 
-        $scope.numberOfPages = function() {
-            return Math.ceil($scope.pressreleases.length / $scope.pageSize);
+        $scope.numberOfPages = function(dataScope) {
+            return Math.ceil(dataScope.length / $scope.pageSize);
         };
 
         $scope.getNumberAsArray = function(num) {
@@ -37,14 +37,16 @@ pressControllers.controller("SummaryController", function($scope, $http, $timeou
 
             if ($scope.currentPage >= $scope.pageLimit-1) {
                 $scope.currentPage = $scope.pageLimit-1;                       
-            };          
+            }; 
+
+            $scope.goToPage = currentPage+1;         
         };
 
         $scope.currentGoToPage = 1;
 
-        $scope.goToPage = 1;
+        $scope.goToPage = 0;
         
-        $scope.pageLimit = $scope.numberOfPages();
+        $scope.pageLimit = $scope.numberOfPages($scope.pressreleases);
 
         $scope.$watch('goToPage', function(newValue, oldValue){
             
@@ -64,7 +66,7 @@ pressControllers.controller("SummaryController", function($scope, $http, $timeou
                 $scope.currentPage = newValue-1;
             });
 
-        $scope.pages = $scope.getNumberAsArray($scope.numberOfPages());        
+        $scope.pages = $scope.getNumberAsArray($scope.numberOfPages($scope.pressreleases));        
     });
 });
 

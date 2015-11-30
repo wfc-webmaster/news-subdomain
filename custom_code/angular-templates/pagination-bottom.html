@@ -1,0 +1,9 @@
+<button class="page-button first" ng-click="setCurrentPage(0); scrollToTop()">First</button>
+
+<button class="page-button prev" ng-click="setCurrentPage(currentPage - 1); scrollToTop()">< Prev</button>
+
+<input type="number" ng-model="goToPage">		
+
+<button class="page-button next" ng-click="setCurrentPage(currentPage + 1); scrollToTop()">Next ></button>
+
+<button class="page-button last" ng-click="setCurrentPage(pages[pages.length-2]); scrollToTop()">Last</button>

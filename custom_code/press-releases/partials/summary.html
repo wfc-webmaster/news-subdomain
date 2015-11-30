@@ -14,18 +14,10 @@
 			<input type="radio" ng-model="direction" name="direction" value="reverse">
 		</label>	
 	</div>
-	<p id="page-count-1" class="page-count">Page {{currentPage + 1}} of {{numberOfPages()}}</p>
-	<div class="archive-pagination">
-		<button class="page-button first" ng-click="setCurrentPage(0); scrollToTop()">First</button>
-
-		<button class="page-button prev" ng-click="setCurrentPage(currentPage - 1); scrollToTop()">< Prev</button>
-		
-		<input type="number" ng-model="goToPage">		
-
-		<button class="page-button next" ng-click="setCurrentPage(currentPage + 1); scrollToTop()">Next ></button>
-
-		<button class="page-button last" ng-click="setCurrentPage(pages[pages.length-2]); scrollToTop()">Last</button>
-	</div>
+	
+	<p id="page-count-1" class="page-count">Page {{currentPage + 1}} of {{numberOfPages(pressreleases)}}</p>
+	
+	<pagination-top class="archive-pagination"></pagination-top>
 
 	<div id="pressrelease-{{pressrelease.id}}" class="archive-summary-container" ng-repeat="pressrelease in pressreleases | filter:searchPressReleases | orderBy:orderPressReleases:direction | startFrom: currentPage*pageSize | limitTo: pageSize">
 
@@ -40,16 +32,8 @@
 
 	</div>
 	
-	<p id="page-count-2" class="page-count">Page {{currentPage + 1}} of {{numberOfPages()}}</p>
-	<div class="archive-pagination">
-		<button class="page-button first" ng-click="setCurrentPage(0); scrollToTop()">First</button>
+	<p id="page-count-2" class="page-count">Page {{currentPage + 1}} of {{numberOfPages(pressreleases)}}</p>
+	
+	<pagination-bottom class="archive-pagination"></pagination-bottom>
 
-		<button class="page-button prev" ng-click="setCurrentPage(currentPage - 1); scrollToTop()">< Prev</button>
-		
-		<input type="number" ng-model="goToPage">		
-
-		<button class="page-button next" ng-click="setCurrentPage(currentPage + 1); scrollToTop()">Next ></button>
-
-		<button class="page-button last" ng-click="setCurrentPage(pages[pages.length-2]); scrollToTop()">Last</button>
-	</div>
 </section>
