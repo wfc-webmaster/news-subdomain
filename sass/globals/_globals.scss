@@ -10,6 +10,17 @@ input {
     border-radius: 0;
 }
 
+select {
+    color: $wfc-gray;
+    border: 1px solid $wfc-lightgray;
+    font-size: 0.9rem;
+    margin: 0 1rem 0 0.4rem;    
+}
+
+select:focus {
+    outline: none;
+}
+
 //Section Head
 
 .page-header {

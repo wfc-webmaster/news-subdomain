@@ -18,3 +18,19 @@ magazineArchive.config(['$routeProvider', function($routeProvider) {
 		redirectTo: '/summary'
 	});
 }]);
+
+magazineArchive.directive('paginationTop', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/angular-templates/pagination-top.html'
+
+	};
+});
+
+magazineArchive.directive('paginationBottom', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/angular-templates/pagination-bottom.html'
+
+	};
+});

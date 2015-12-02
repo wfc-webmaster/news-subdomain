@@ -239,21 +239,29 @@ Elements
   padding: 0.5rem;
 }
 
-.page-button {
+.page-button,
+.page-input {
   border: 1px solid #dedede;
   background-color: transparent;
   flex: 1;
   font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 100%;
+  margin: 0 0.25rem;
+  padding: 0.5rem 0;
   -webkit-appearance: none;
 }
 
-.page-button:hover {
-  border-color: #f0b252;
+.page-button {
+  border-radius: 5px;
 }
 
-.page-button:focus {
-  background: #f0b252;
-  color: #fff;
+.page-button:hover {
+  background-color: #eee;
+}
+
+.page-button:focus,
+.page-input:focus {
   outline: none;
 }
 
@@ -271,6 +279,23 @@ Elements
 .page-count {
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.archive-pagination input {
+  flex: 0.5;
+  padding: 0 0 0 1.8rem;
+}
+.archive-pagination input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.archive-pagination input[type=number]::-webkit-outer-spin-button, .archive-pagination input[type=number]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+pagination-top {
+  margin-top: 0.75rem;
 }
 
 /** Text */
@@ -614,6 +639,17 @@ body {
 
 input {
   border-radius: 0;
+}
+
+select {
+  color: #4d4d4d;
+  border: 1px solid #dedede;
+  font-size: 0.9rem;
+  margin: 0 1rem 0 0.4rem;
+}
+
+select:focus {
+  outline: none;
 }
 
 .page-header {
@@ -1773,14 +1809,6 @@ input.search-archives {
   margin: 0 1rem 0 0.4rem;
   padding: 0.25rem;
   width: 65%;
-}
-
-select.archive-sort {
-  color: #4d4d4d;
-  border: 1px solid #dedede;
-  font-size: .9rem;
-  margin: 0 1rem 0 0.4rem;
-  width: 5.5rem;
 }
 
 #archive-search label:nth-child(3) {

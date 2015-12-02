@@ -1,7 +1,7 @@
 <section class="summary-page flex-container-column">
 	<div id="archive-search" class="flex-container-row">
 		<label class="search-sort">Select Issue
-			<select ng-model="filterMagazineIssues" ng-options="magazineissue.issue as magazineissue.issue for magazineissue in magazineissues | orderBy:['-volume', '-number']:direction">
+			<select id="mag-selector" ng-model="filterMagazineIssues" ng-options="magazineissue.issue as magazineissue.issue for magazineissue in magazineissues | orderBy:['-volume', '-number']:direction" ng-change="hidePaginate()">
 				<option value="">- Show All -</option>
 			</select>
 		</label>
@@ -13,8 +13,13 @@
 			<input type="radio" ng-model="direction" name="direction" value="">
 		</label>	
 	</div>
+
+	<p id="page-count-1" class="page-count">Page {{currentPage + 1}} of {{numberOfPages(magazineissues)}}</p>
 	
-	<div id="magissue-{{magazineissue.issue|addhyphen}}" class="archive-summary-container flex-container-row feature-summary" ng-repeat-start="magazineissue in magazineissues | filter:filterMagazineIssues | orderBy:['-volume', '-number']:direction">
+	<pagination-top class="archive-pagination"></pagination-top>
+	
+	<div id="magissue-{{magazineissue.issue|addhyphen}}" class="archive-summary-container flex-container-row feature-summary" ng-repeat-start="magazineissue in magazineissues | filter:filterMagazineIssues | orderBy:['-volume', '-number']:direction | startFrom: currentPage*pageSize | limitTo: pageSize">
+			
 			<div class="archive-feature-image">
 			<img class="mag-archive-img" ng-src="//localhost:8888/wildflower_news/wp-content/uploads/2015/11/magazine-{{magazineissue.volume}}-{{magazineissue.number}}.jpg">
 			</div>
@@ -29,5 +34,9 @@
 		
 	</div>
 	<div ng-repeat-end></div>
+
+	<p id="page-count-2" class="page-count">Page {{currentPage + 1}} of {{numberOfPages(magazineissues)}}</p>
+	
+	<pagination-bottom class="archive-pagination"></pagination-bottom>
 
 </section>
