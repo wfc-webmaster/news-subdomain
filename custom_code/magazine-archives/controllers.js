@@ -49,11 +49,33 @@ magazineControllers.controller("SummaryController", function($scope, $http, $tim
 
         $scope.hidePaginate = function() {
             var select = document.getElementById('mag-selector');
+            var pageCounter = document.getElementsByClassName('page-count');
+            var pagination = document.getElementsByClassName('archive-pagination');
+            var searchSort = document.getElementsByClassName('search-sort');
             
             if (select.selectedIndex === 0) {
-                console.log("Show All");
+                for (var i = 0; i < pageCounter.length; i++) {
+                    pageCounter[i].style.display = 'flex';
+                }
+                for (var i = 0; i < pagination.length; i++) {
+                    pagination[i].style.display = 'flex';
+                }
+                for (var i = 1; i < searchSort.length; i++) {
+                    searchSort[i].style.display = '';
+                } 
+                
             } else {
-                console.log("Not Show All");
+                for (var i = 0; i < pageCounter.length; i++) {
+                    pageCounter[i].style.display = 'none';
+                }
+                for (var i = 0; i < pagination.length; i++) {
+                    pagination[i].style.display = 'none';
+                }
+                for (var i = 1; i < searchSort.length; i++) {
+                    searchSort[i].style.display = 'none';
+                }      
+                $scope.currentPage = 0;
+                $scope.goToPage = 0;                
             }
 
         };
