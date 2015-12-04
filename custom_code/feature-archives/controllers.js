@@ -9,7 +9,8 @@ featureControllers.controller("SummaryController", function($scope, $http, $time
 
         //Create pagination
         $scope.currentPage = 0;
-        $scope.pageSize = 15;
+        $scope.setPageSize = 15;
+        $scope.pageSize = $scope.setPageSize;
 
 
         $scope.numberOfPages = function(dataScope) {

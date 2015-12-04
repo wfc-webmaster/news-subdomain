@@ -61,7 +61,8 @@ featureArchive.directive('hidePagination', function(){
             		var pageCounter = document.getElementsByClassName('page-count');
             		var pagination = document.getElementsByClassName('archive-pagination');
             		var searchSort = document.getElementsByClassName('search-sort');
-            		            		                        
+
+            		//Hides the pagination when search terms are entered            		                        
             		if (searchFieldValue && searchFieldValue != '') {
             			for (var i = 0; i < pageCounter.length; i++) {
             			    pageCounter[i].style.display = 'none';
@@ -71,7 +72,13 @@ featureArchive.directive('hidePagination', function(){
             			}
             			for (var i = 1; i < searchSort.length; i++) {
             			    searchSort[i].style.display = 'none';
-            			}            		    
+            			}
+            			//Reset features-per-page limit to search all features 
+            			scope.pageSize = scope.features.length;
+            			//Reset current page to first page so search works
+            			scope.setCurrentPage(0);
+            			
+            		//Re-displays pagination when search input is empty	           		    
             		} else {
             			for (var i = 0; i < pageCounter.length; i++) {
             			    pageCounter[i].style.display = 'flex';
@@ -81,9 +88,11 @@ featureArchive.directive('hidePagination', function(){
             			}
             			for (var i = 1; i < searchSort.length; i++) {
             			    searchSort[i].style.display = '';
-            			}            		    
+            			}
+            			//Reset features-per-page limit back 
+            			scope.pageSize = scope.setPageSize;              			
             		}	
-            	})	
+            	});				            	
 			}
 	};
 });

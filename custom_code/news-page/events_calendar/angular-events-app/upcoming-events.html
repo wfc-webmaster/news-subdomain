@@ -1,0 +1,14 @@
+<div id="news-events-container" class="sidebar-list-container sidebar-container">
+    <div class="sidebar-list-heading">
+		<h6>Upcoming Events</h6>
+		<p><em>What's happening at the Wildflower Center</em></p>
+	</div>
+	<div id="news-events-list" class="upcoming-events-list">
+		<ul>
+			<li ng-repeat="event in events | limitTo: 5">
+				{{event.title}}
+			</li>
+		</ul>
+    <div id="events-all"><a class="sidebar-button" href="//wildflower.org/events" target="_blank">View All Events</a></div>
+    </div>
+</div>
