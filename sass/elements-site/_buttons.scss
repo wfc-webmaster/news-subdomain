@@ -40,6 +40,20 @@
     }
 }
 
+.lightorange-button {
+    background-color: $wfc-lightorange;
+    border: none;
+    color: $wfc-white;
+    font-size: 1rem;
+    outline: none;
+    padding: 0.5rem;
+}
+
+.lightorange-button:hover {
+    cursor: auto;
+    text-decoration: underline;
+}
+
 .callout-arrow {
     margin-top: 0.5rem;
     width: 1.38rem;

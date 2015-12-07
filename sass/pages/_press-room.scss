@@ -1,0 +1,41 @@
+//This file controls Press Room page and all child pages (i.e. Facts & Figures, Images, Experts Guide)
+
+#press-room-container,
+#facts-figures-container {
+	justify-content: space-between;
+}
+
+.press-room-section {
+	flex: 1 0 20.5rem;
+	margin-bottom: 2.5rem;
+	max-width: 20.5rem;
+
+	img {
+		margin-bottom: 0.35rem;
+		width: 100%;
+	}
+
+	ul {
+	    list-style: inherit;
+	    list-style-position: outside;
+        padding-left: 1.1rem;
+	}
+
+	h6 {
+	    margin-bottom: 0.9rem;
+	}
+}
+
+.press-room-section:nth-child(odd) {
+	margin-right: 1.25rem;	
+}
+
+.press-room-section:last-of-type {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 944px) {
+	.press-room-section {
+		max-width: 100%;
+	}
+}
