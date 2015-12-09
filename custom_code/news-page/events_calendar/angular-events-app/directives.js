@@ -12,7 +12,6 @@ eventsDisplay.directive('upcomingEvents', function(){
 
 eventsDisplay.controller('UpcomingEventsCtrlNew', function($http, $scope) {
 	$http.get('wp-content/themes/wildflowercenter/custom_code/news-page/events_calendar/angular-events-app/api.php').success(function(data) {
-		$scope.events = data;
-		console.log($scope.events[0]['id']);
+		$scope.events = data;		
 	});
 });

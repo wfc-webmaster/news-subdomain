@@ -1,0 +1,18 @@
+#contacts-container {
+    margin: 2rem 0 0 0;
+}
+
+.contact-card {
+	flex: 1 0 15rem;
+	margin: 0 5rem 2rem 0;
+	max-width: 15rem;
+
+	li {
+		line-height: 150%;	
+		list-style: none;
+	}
+
+	li h6 {
+	    margin: 0 0 0.6rem 0;
+	}
+}
