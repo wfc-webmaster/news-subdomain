@@ -279,11 +279,9 @@ div.entry-summary.entry-content {
 	.post-category {
 		display: none;
 	}
-	figure.wp-caption {
-		margin: 1.5rem 0;
-	}
+
 	figure.wp-caption:first-of-type {
-		margin: 0;
+		padding-top: 0.5rem;
 	}
 }
 
