@@ -2708,6 +2708,34 @@ div.entry-summary.entry-content {
     width: 100%;
   }
 }
+.related-post-callout {
+  border-bottom: 1px solid #dedede;
+  border-top: 1px solid #dedede;
+  margin-top: 0.5rem;
+  max-width: 30%;
+  padding-top: 1rem;
+}
+.related-post-callout h5 {
+  font-weight: 600;
+}
+.related-post-callout h6 {
+  margin-bottom: 0.5rem;
+}
+.related-post-callout a {
+  color: inherit;
+}
+.related-post-callout p {
+  font-size: 0.85rem;
+}
+
+.related-post-callout.alignleft {
+  margin: 0.5rem 3rem 0.5rem 0;
+}
+
+.related-post-callout.alignright {
+  margin: 0.5rem 0 0.5rem 3rem;
+}
+
 #block-bpo562562b704d99 .more-link {
   background-color: transparent;
   color: #f0b252;
