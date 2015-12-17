@@ -2659,6 +2659,9 @@ div#block-b1f56057adcd0576 .more-link::after {
   display: inline-block;
   padding-left: 0.5rem;
 }
+div#block-b1f56057adcd0576 .entry-row:last-child .type-post {
+  border-bottom: 0;
+}
 
 div#block-b1f56057adcd0576 > div.block-content > div.loop > article:first-child {
   padding-top: 0;
@@ -2713,7 +2716,7 @@ div.entry-summary.entry-content {
   border-top: 1px solid #dedede;
   margin-top: 0.5rem;
   max-width: 30%;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 .related-post-callout h5 {
   font-weight: 600;
@@ -2726,6 +2729,7 @@ div.entry-summary.entry-content {
 }
 .related-post-callout p {
   font-size: 0.85rem;
+  margin-bottom: 0;
 }
 
 .related-post-callout.alignleft {
