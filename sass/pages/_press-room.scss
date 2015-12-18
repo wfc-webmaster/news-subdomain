@@ -35,3 +35,13 @@
 		max-width: 100%;
 	}
 }
+
+@media screen and (max-width: 904px) {
+	.press-room-section {
+		flex: 1 0 100%;
+	}
+
+	.press-room-section:nth-child(odd) {
+		margin-right: 0;
+	}
+}

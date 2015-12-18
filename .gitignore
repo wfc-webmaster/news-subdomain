@@ -7,6 +7,8 @@ api.php
 api2.php
 api*.php
 conn.php
+conn2.php
+conn*.php
 *.sublime-project
 *.sublime-workspace
 .DS_Store

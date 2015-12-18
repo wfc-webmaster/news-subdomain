@@ -2272,7 +2272,8 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.archive-grid li.cat-item {
+.archive-grid li.cat-item,
+.archive-grid li.tag-item {
   border: 1px solid #dedede;
   -webkit-flex: 0 250px;
       -ms-flex: 0 250px;
@@ -2280,28 +2281,33 @@ STYLE RULES FOR "SUCCULENT" FEATURE 164
   margin: 0 0.75rem 0.75rem 0;
   text-align: center;
 }
-.archive-grid li.cat-item:hover {
+.archive-grid li.cat-item:hover,
+.archive-grid li.tag-item:hover {
   border-color: #f0b252;
 }
-.archive-grid li.cat-item a {
+.archive-grid li.cat-item a,
+.archive-grid li.tag-item a {
   display: block;
   padding: 0.5rem;
 }
-.archive-grid li.cat-item a:hover {
+.archive-grid li.cat-item a:hover,
+.archive-grid li.tag-item a:hover {
   background-color: #f0b252;
   color: #fff;
   text-decoration: none !important;
 }
 
 @media screen and (max-width: 1180px) {
-  .archive-grid li.cat-item {
+  .archive-grid li.cat-item,
+  .archive-grid li.tag-item {
     -webkit-flex: 0 225px;
         -ms-flex: 0 225px;
             flex: 0 225px;
   }
 }
 @media screen and (max-width: 737px) {
-  .archive-grid li.cat-item {
+  .archive-grid li.cat-item,
+  .archive-grid li.tag-item {
     -webkit-flex: 1 100%;
         -ms-flex: 1 100%;
             flex: 1 100%;
@@ -2460,6 +2466,17 @@ h2.tribe-events-page-title {
 @media screen and (max-width: 944px) {
   .press-room-section {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 904px) {
+  .press-room-section {
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+
+  .press-room-section:nth-child(odd) {
+    margin-right: 0;
   }
 }
 #contacts-container {
@@ -2711,6 +2728,10 @@ div.entry-summary.entry-content {
     width: 100%;
   }
 }
+#post_tags {
+  font-size: 0.9rem;
+}
+
 .related-post-callout {
   border-bottom: 1px solid #dedede;
   border-top: 1px solid #dedede;

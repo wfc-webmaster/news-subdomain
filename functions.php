@@ -74,6 +74,17 @@ function insert_tumblr_script() {
 	echo '<script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>';
 }
 
+function add_tags() {
+	$check_if_home_page = is_home();	
+
+	//Only display 
+	if (!$check_if_home_page == 1) {
+		the_tags('<div id="post_tags"><strong>Tags:</strong> ', ' • ', '</div>');		
+	}		
+}
+
+add_action('headway_after_entry_content', 'add_tags');
+
 function add_sharebar_to_posts() {
 	//if ( is_single() && !is_single('0') ) {		
 	if ( is_singular('post') ) {		
@@ -98,10 +109,12 @@ add_action('headway_after_entry_content', 'add_sharebar_to_posts');
 
 function insert_post_nav_script() {
 	if (is_singular('post')) {
-		echo '<script type="text/javascript" src="http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/js/postNav.min.js"></script>';
+		echo '<script type="text/javascript" src="../wp-content/themes/wildflowercenter/js/postNav.min.js"></script>';
 	}
 }
 
 add_action('wp_footer', 'insert_post_nav_script');
+
+
 
 ?>

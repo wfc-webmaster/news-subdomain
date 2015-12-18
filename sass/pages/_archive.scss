@@ -28,23 +28,27 @@
 .archive-grid {
 	justify-content: flex-start;
 
-	li.cat-item {
+	li.cat-item,
+	li.tag-item {
 		border: 1px solid $wfc-lightgray;
 		flex: 0 250px;
 	    margin: 0 0.75rem 0.75rem 0;
 		text-align: center;
 	}
 
-	li.cat-item:hover {
+	li.cat-item:hover,
+	li.tag-item:hover {
 		border-color: $wfc-lightorange;
 	}
 
-	li.cat-item a {
+	li.cat-item a,
+	li.tag-item a {
 		display: block;
 		padding: 0.5rem;
 	}
 
-	li.cat-item a:hover {
+	li.cat-item a:hover,
+	li.tag-item a:hover {
 		background-color: $wfc-lightorange;
 		color: $wfc-white;
 		text-decoration: none !important;
@@ -55,7 +59,8 @@
 
 	.archive-grid {
 
-		li.cat-item {
+		li.cat-item,
+		li.tag-item {
 			flex: 0 225px;
 		}
 	}
@@ -65,7 +70,8 @@
 
 	.archive-grid {
 		
-		li.cat-item {
+		li.cat-item,
+		li.tag-item {
 			flex: 1 100%;
 			margin: 0 0 0.75rem 0;
 		}
