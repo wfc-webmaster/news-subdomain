@@ -45,3 +45,38 @@
 		margin-right: 0;
 	}
 }
+
+//Experts Guide landing
+
+#experts-display-container {
+	justify-content: space-between;
+}
+
+.expert-card {
+	flex: 1 0 20rem;	
+	list-style: none;
+	margin-bottom: 3rem;
+	max-width: 383.5px;
+
+	img {
+		margin: 0;
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+.expert-card:nth-child(odd) {
+	margin-right: 2.5rem;
+}
+
+@media screen and (max-width: 909px) {
+	.expert-card {
+		flex: 1 0 100%;
+		max-width: 100%;
+	}
+	.expert-card:nth-child(odd) {
+		margin-right: 0;
+	}
+}

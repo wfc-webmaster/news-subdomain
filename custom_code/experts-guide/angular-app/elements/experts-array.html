@@ -1,0 +1,11 @@
+<div id="experts-display-container" class="flex-container-row">
+	
+	<div class="experts-array-item expert-card" ng-repeat="expert in experts">
+		<li><a href="#/profile/{{experts.indexOf(expert)}}/{{expert.first_name}}-{{expert.last_name}}"><img ng-src="{{expert.headshot_url}}" width="100%"></a></li>		
+		<li><h6><a href="#/profile/{{experts.indexOf(expert)}}/{{expert.first_name}}-{{expert.last_name}}">{{expert.prefix_name}} {{expert.first_name}} {{expert.last_name}}</a></h6></li>
+		<li>{{expert.title}}</li>
+		<hr>
+		<li><em>Expertise: {{expert.expertise_areas}}</em></li>
+	</div>
+
+</div>

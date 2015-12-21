@@ -2479,6 +2479,43 @@ h2.tribe-events-page-title {
     margin-right: 0;
   }
 }
+#experts-display-container {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.expert-card {
+  -webkit-flex: 1 0 20rem;
+      -ms-flex: 1 0 20rem;
+          flex: 1 0 20rem;
+  list-style: none;
+  margin-bottom: 3rem;
+  max-width: 383.5px;
+}
+.expert-card img {
+  margin: 0;
+}
+.expert-card a {
+  color: inherit;
+}
+
+.expert-card:nth-child(odd) {
+  margin-right: 2.5rem;
+}
+
+@media screen and (max-width: 909px) {
+  .expert-card {
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    max-width: 100%;
+  }
+
+  .expert-card:nth-child(odd) {
+    margin-right: 0;
+  }
+}
 #contacts-container {
   margin: 2rem 0 0 0;
 }
