@@ -1,5 +1,16 @@
-<div id="experts-profile-container" class="">
-
-	<h1>{{experts[whichExpertId].first_name}} {{experts[whichExpertId].last_name}}</h1>
+<div id="experts-profile-container">
+	<img ng-src="{{experts[whichExpertId].headshot_url}}">
+	<h2>{{experts[whichExpertId].first_name}} {{experts[whichExpertId].last_name}}</h2>
+	<h6>{{experts[whichExpertId].title}}</h6>
+	<p><em><strong>Expertise:</strong> {{experts[whichExpertId].expertise_areas}}</em></p>
+	<p>{{experts[whichExpertId].bio}}</p>
+	<div class="expert-contact-card">
+		<h6>Contact Info</h6>
+		<hr>
+		<li>{{experts[whichExpertId].first_name}} {{experts[whichExpertId].last_name}}</li>
+		<li>{{experts[whichExpertId].phone}}</li>
+		<li><a href="mailto:{{experts[whichExpertId].email}}">Email {{experts[whichExpertId].first_name}}</a></li>
+	</div>
+	<a href="http://localhost:8888/wildflower_news/pressroom/experts-guide/#/list"<button class="outline-button">&laquo; Back To Experts</button>
 
 </div>

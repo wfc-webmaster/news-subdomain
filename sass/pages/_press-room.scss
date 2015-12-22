@@ -80,3 +80,31 @@
 		margin-right: 0;
 	}
 }
+
+#experts-profile-container {
+	h6 {
+		margin: 0.3rem 0 1rem 0;
+	}
+	img {
+	    float: left;
+	    margin: 0 2rem 1rem 0;
+	    width: 27rem;
+	}
+}
+
+.expert-contact-card {
+	border: 1px solid #dedede;
+	list-style: none;
+	margin: 1.5rem 0 2.5rem 0;
+	padding: 1rem;
+	width: 15rem;
+}
+
+@media screen and (max-width: 920px) {
+	#experts-profile-container {
+		img {
+			float: none;
+			width: 100%;			
+		}
+	}
+}
