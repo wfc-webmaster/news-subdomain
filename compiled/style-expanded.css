@@ -191,6 +191,11 @@ a:hover {
 Elements
 ========
 */
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .button-link {
   height: 100%;
   left: 0;
@@ -2415,30 +2420,30 @@ h2.tribe-events-page-title {
   justify-content: space-between;
 }
 
-.expert-card {
+.array-item {
   flex: 1 0 20rem;
   list-style: none;
   margin-bottom: 3rem;
   max-width: 383.5px;
 }
-.expert-card img {
+.array-item img {
   margin: 0;
 }
-.expert-card a {
+.array-item a {
   color: inherit;
 }
 
-.expert-card:nth-child(odd) {
+.array-item:nth-child(odd) {
   margin-right: 2.5rem;
 }
 
 @media screen and (max-width: 909px) {
-  .expert-card {
+  .array-item {
     flex: 1 0 100%;
     max-width: 100%;
   }
 
-  .expert-card:nth-child(odd) {
+  .array-item:nth-child(odd) {
     margin-right: 0;
   }
 }
@@ -2465,6 +2470,41 @@ h2.tribe-events-page-title {
     width: 100%;
   }
 }
+.hires-array-item {
+  text-align: right;
+}
+.hires-array-item li {
+  line-height: 130%;
+}
+
+.view-link, .dwld-link {
+  color: #f0b252;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.view-link {
+  margin-right: 0.85rem;
+}
+
+.single-hires-container img {
+  margin: 0;
+}
+.single-hires-container button {
+  margin-top: 1rem;
+}
+
+.single-dwld-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 15rem;
+}
+.single-dwld-link .fa {
+  color: #fff;
+}
+
 #contacts-container {
   margin: 2rem 0 0 0;
 }

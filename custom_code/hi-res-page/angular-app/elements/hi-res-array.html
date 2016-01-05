@@ -1,0 +1,9 @@
+<div id="hires-display-container" class="flex-container-row">
+	<div class="hires-array-item array-item" ng-repeat="picture in pictures">
+		<li>
+			<a href="#/single-image/{{pictures.indexOf(picture)}}"><img ng-src="{{picture.img_url}}" alt="{{picture.alt_tag}}" width="100%"></a>
+			<div class="view-link"><a href="#/single-image/{{pictures.indexOf(picture)}}">View</a></div>
+			<div class="dwld-link"><a href="{{picture.hi_res_url}}" download="">Download</a></div>
+		</li>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<!-- **************************************** 
+* Need to edit the Hi-Res Images images/info?
+*
+* Using the WP Dashboad left-side menu goto:
+*
+* Tools > Adminer
+*
+* All data is contained in the wfc_hi_res_img table 
+***************************************************-->
+
+<html ng-app="wfcHiRes">
+	<head>
+		<title>Hi-Res Images of the Wildflower Center</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+		<script src="http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/hi-res-page/angular-app/app.js"></script>
+		<script src="http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/hi-res-page/angular-app/directives.js"></script>
+		<script src="http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/angular-filters/filters.js"></script>
+	</head>
+	
+	<body>	
+	
+	<div id="press-room-title" class="page-header">
+	 	<h1>Hi-Res Images</h1>
+	  	<p>These images of the Wildflower Center campus and gardens are available to journalists and media professionals. Please use photo credits as indicated.</p>      
+	</div>
+	
+	<div class="body" autoscroll="true" ng-view></div>
+
+	</body>
+</html>
