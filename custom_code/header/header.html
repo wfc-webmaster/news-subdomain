@@ -21,8 +21,7 @@
 				$main_args = array(
 					'theme_location' => 'wfc-main-nav',
 					'container' => false 
-					);
-				
+					);				
 				wp_nav_menu($main_args);
 			?>
 		</div>
@@ -44,15 +43,13 @@
 			<!-- Creates a custom nav displayed on mobile devices -->
 			<div id="mobile-nav">
 				<?php 
-
 				$mobile_args = array( 
 					'theme_location' => 'wfc-mobile-nav',
 					'menu_class' => 'nav-menu flex-container-column',
 					'container' => false,
 					'items_wrap' => 
-						'<li id="nav-menu-close" class="menu-item menu-item-type-post_type menu-item-object-page"><div id="close-x"><i class="fa fa-times"></i></div></li><li id="nav-menu-title" class="menu-item menu-item-type-post_type menu-item-object-page">Wildflower News</li>%3$s'
+						'<li id="nav-menu-close" class="menu-item menu-item-type-post_type menu-item-object-page"><div id="close-x"><i class="fa fa-times"></i></div></li><li id="nav-menu-title" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Wildflower News</a></li>%3$s'
 					);
-
 					if ( wp_is_mobile() ) {
 						wp_nav_menu($mobile_args);
 					}
