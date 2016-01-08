@@ -20,9 +20,9 @@ hiresDisplay.directive('hiResImage', function() {
 	};
 });
 
-hiresDisplay.controller('HiResInfo', function($http, $scope, $routeParams, $location) {
+hiresDisplay.controller('HiResInfo', ["$http", "$scope", "$routeParams", "$location", function($http, $scope, $routeParams, $location) {
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/hi-res-page/angular-app/api.php').success(function(data) {
 		$scope.pictures = data;
 		$scope.whichImageId = $routeParams.imageId;		
 	});
-});
+}]);

@@ -1,6 +1,6 @@
 var featureControllers = angular.module("featureControllers", ['ngSanitize']);
 
-featureControllers.controller("SummaryController", function($scope, $http, $timeout, $location, $anchorScroll){
+featureControllers.controller("SummaryController", ["$scope", "$http", "$timeout", "$location", "$anchorScroll", function($scope, $http, $timeout, $location, $anchorScroll){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/feature-archives/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.features = data;
@@ -69,12 +69,12 @@ featureControllers.controller("SummaryController", function($scope, $http, $time
 
         $scope.pages = $scope.getNumberAsArray($scope.numberOfPages($scope.features));
     });
-});
+}]);
 
-featureControllers.controller("FullArticleController", function($scope, $http, $timeout, $routeParams){
+featureControllers.controller("FullArticleController", ["$scope", "$http", "$timeout", "$routeParams", function($scope, $http, $timeout, $routeParams){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/feature-archives/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.features = data;
         $scope.whichFeature = $routeParams.featureId;
     });
-});
+}]);

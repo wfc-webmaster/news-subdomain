@@ -1,6 +1,6 @@
 var pressControllers = angular.module("pressControllers", ['ngSanitize']);
 
-pressControllers.controller("SummaryController", function($scope, $http, $timeout, $location, $anchorScroll){
+pressControllers.controller("SummaryController", ["$scope", "$http", "$timeout", "$location", "$anchorScroll", function($scope, $http, $timeout, $location, $anchorScroll){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/press-releases/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.pressreleases = data;
@@ -69,12 +69,12 @@ pressControllers.controller("SummaryController", function($scope, $http, $timeou
 
         $scope.pages = $scope.getNumberAsArray($scope.numberOfPages($scope.pressreleases));        
     });
-});
+}]);
 
-pressControllers.controller("FullArticleController", function($scope, $http, $timeout, $routeParams){
+pressControllers.controller("FullArticleController", ["$scope", "$http", "$timeout", "$routeParams", function($scope, $http, $timeout, $routeParams){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/press-releases/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.pressreleases = data;
         $scope.whichRelease = $routeParams.releaseId;
     });
-});
+}]);

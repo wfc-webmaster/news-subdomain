@@ -1,6 +1,6 @@
 var magazineControllers = angular.module("magazineControllers", ['ngSanitize']);
 
-magazineControllers.controller("SummaryController", function($scope, $http, $timeout, $location, $anchorScroll){
+magazineControllers.controller("SummaryController", ["$scope", "$http", "$timeout", "$location", "$anchorScroll", function($scope, $http, $timeout, $location, $anchorScroll){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/magazine-archives/api.php').success(function(data) {
              // here the data from the api is assigned to a variable named users             
         $scope.magazineissues = data;
@@ -106,9 +106,9 @@ magazineControllers.controller("SummaryController", function($scope, $http, $tim
 
         $scope.pages = $scope.getNumberAsArray($scope.numberOfPages($scope.magazineissues));
     });
-});
+}]);
 
-magazineControllers.controller("FullArticleController", function($scope, $http, $timeout, $routeParams, $location){
+magazineControllers.controller("FullArticleController", ["$scope", "$http", "$timeout", "$routeParams", "$location", function($scope, $http, $timeout, $routeParams, $location){
 	$http.get('http://localhost:8888/wildflower_news/wp-content/themes/wildflowercenter/custom_code/magazine-archives/api.php').success(function(data) {
             // here the data from the api is assigned to a variable named users
         $scope.magazineissues = data;
@@ -117,4 +117,4 @@ magazineControllers.controller("FullArticleController", function($scope, $http, 
         console.log($routeParams);        
         console.log($location);        
     });
-});
+}]);

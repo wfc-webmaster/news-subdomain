@@ -21,7 +21,7 @@
 				$main_args = array(
 					'theme_location' => 'wfc-main-nav',
 					'container' => false 
-					);				
+					);
 				wp_nav_menu($main_args);
 			?>
 		</div>
@@ -33,7 +33,7 @@
 		</div>
 
 		<div id="header-search">
-			<form action="../wildflower_news" method="get">
+			<form action="<?php echo get_home_url(); ?>" method="get">
 				<input type="text" name="s" id="search" placeholder="Search Wildflower News" value="<?php the_search_query(); ?>" />
 				<input type="hidden" value="post" name="post_type" id="post_type" />				
 			</form>			
@@ -42,13 +42,13 @@
 		<div id="mobile-menu-overlay">
 			<!-- Creates a custom nav displayed on mobile devices -->
 			<div id="mobile-nav">
-				<?php 
+				<?php
 				$mobile_args = array( 
 					'theme_location' => 'wfc-mobile-nav',
 					'menu_class' => 'nav-menu flex-container-column',
 					'container' => false,
 					'items_wrap' => 
-						'<li id="nav-menu-close" class="menu-item menu-item-type-post_type menu-item-object-page"><div id="close-x"><i class="fa fa-times"></i></div></li><li id="nav-menu-title" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Wildflower News</a></li>%3$s'
+						'<li id="nav-menu-close" class="menu-item menu-item-type-post_type menu-item-object-page"><div id="close-x"><i class="fa fa-times"></i></div></li><li id="nav-menu-title" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_home_url() . '">Wildflower News</a></li>%3$s'
 					);
 					if ( wp_is_mobile() ) {
 						wp_nav_menu($mobile_args);
