@@ -2,6 +2,7 @@
 $query = new WP_Query(array(
     'posts_per_page'   => 5,
     'ignore_sticky_posts' => true,
+    'cat' => '-237',
 ));
 ?>
 

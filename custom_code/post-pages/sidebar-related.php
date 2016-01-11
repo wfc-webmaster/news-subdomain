@@ -4,9 +4,10 @@ $post_id = get_queried_object_id();
 
 //Get the tags of the current post
 $tags = wp_get_post_tags($post_id);
+echo $tags;
 
 if ($tags) {
-	$related_tags = array($tags[0]->term_id, $tags[1]->term_id, $tags[3]->term_id );
+	$related_tags = array($tags[0]->term_id, $tags[1]->term_id, $tags[2]->term_id );
 	
 	$args = array(
 		'tag__in' => $related_tags,

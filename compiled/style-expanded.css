@@ -2505,6 +2505,42 @@ h2.tribe-events-page-title {
   color: #fff;
 }
 
+.page-id-2368 .page-header {
+  border-bottom: 1px solid #dedede;
+}
+.page-id-2368 .block-type-content .hentry {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pr-list-item {
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 0.65rem;
+}
+.pr-list-item h2 {
+  margin: 2rem 0 0;
+}
+.pr-list-item h2 a {
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.pr-list-item .pr-date {
+  font-size: 0.8rem;
+  line-height: initial;
+  margin: 0.25rem 0 0;
+}
+
+.pr-list-item:first-of-type h2 {
+  margin: 0;
+}
+
+.pr-button {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
 #contacts-container {
   margin: 2rem 0 0 0;
 }

@@ -1,4 +1,4 @@
-//This file controls Press Room page and all child pages (i.e. Facts & Figures, Images, Experts Guide)
+//This file controls Press Room page and all child pages (i.e. Facts & Figures, Images, Experts Guide, Press Releases)
 
 #press-room-container,
 #facts-figures-container {
@@ -151,4 +151,49 @@
     .fa {
     	color: $wfc-white;
     }
+}
+
+// Press Releases
+
+.page-id-2368 {
+
+	.page-header {
+		border-bottom: 1px solid $wfc-lightgray;
+	}
+	.block-type-content .hentry {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+}
+
+.pr-list-item {
+	border-bottom: 1px solid #dedede;
+    margin-bottom: 0.65rem;    
+	
+	h2 {
+	    margin: 2rem 0 0;
+	}
+
+	h2 a {
+	    color: inherit;
+	    font-size: 1.3rem;
+	    font-weight: 900;
+	}
+
+	.pr-date {
+		font-size: 0.8rem;
+		line-height: initial;
+		margin: 0.25rem 0 0;
+	}
+}
+
+.pr-list-item:first-of-type h2 {
+    margin: 0;
+}
+
+.pr-button {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1.5rem;
 }
