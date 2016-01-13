@@ -45,15 +45,21 @@
     h6 {
         font-weight: 600;
         line-height: 120%;
+        margin-top: 0.25rem;
     }
 
     a {
         color: inherit;
+        display: inherit;
         text-decoration: none;
     }
 
     a:hover {
         text-decoration: underline;
+    }
+
+    img {
+        margin: 0;
     }
 }
 

@@ -1,6 +1,9 @@
 <?php
 
-	$wfc_db = new mysqli('mysqldb.its.utexas.edu', 'wildflow', 'Yd3BSWzG6eYpuMLr', 'wfc_webdev');
+	 // include db connection variables
+	require '../db/conn.php';
+
+	$wfc_db = new mysqli($hostname, $username, $password, $db_name);
 
 	if (mysqli_connect_errno()) {
 	  	echo "Failed to connect to MySQL: " . mysqli_connect_error();

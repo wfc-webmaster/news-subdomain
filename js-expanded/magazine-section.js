@@ -10,11 +10,10 @@ jQuery(document).ready(function($){
 	    var issue1 = JSON.parse(parseFromPHP[0]);
 	    var issue2 = JSON.parse(parseFromPHP[1]);
 	    var issue3 = JSON.parse(parseFromPHP[2]);
-	    //var issue4 = JSON.parse(parseFromPHP[3]); ------> Uncomment when there are at least 4 issues in the DB
+	    var issue4 = JSON.parse(parseFromPHP[3]);
 	    
-	    //Create an array of magazine issues
-	    var issues = [issue1, issue2, issue3];
-	    //var issues = [issue1, issue2, issue3, issue4]; ------> Uncomment when there are at least 4 issues in the DB
+	    //Create an array of magazine issues	    
+	    var issues = [issue1, issue2, issue3, issue4];
 
 	    //This is where the magazine content goes
 	    var block = document.getElementById('magazine-content');
@@ -36,7 +35,7 @@ jQuery(document).ready(function($){
 		block.innerHTML += issue_card_featured;
 		
 		var subBlock = document.getElementById('magazine-featured');
-	    var i = 0;
+	    var i = 1;
 	    var id = 1;
 	    
 
