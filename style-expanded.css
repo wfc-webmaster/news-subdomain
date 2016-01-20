@@ -2499,12 +2499,6 @@ h2.tribe-events-page-title {
     margin-right: 0;
   }
 }
-#press-room-5 {
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1;
-}
-
 #experts-display-container {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -2600,10 +2594,10 @@ h2.tribe-events-page-title {
   color: #fff;
 }
 
-.page-id-2368 .page-header {
+.page-id-2362 .page-header {
   border-bottom: 1px solid #dedede;
 }
-.page-id-2368 .block-type-content .hentry {
+.page-id-2362 .block-type-content .hentry {
   margin-bottom: 0;
   padding-bottom: 0;
 }
