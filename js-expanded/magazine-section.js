@@ -25,8 +25,8 @@ jQuery(document).ready(function($){
 		var issue_card_featured = [
 			'<div id="magazine-featured" class="magazine-current-issue">',
 		 	'<a href="' + issues[i].url + '" target="_blank"><img width="320" src="' + issues[i].thumbnail_url.replace('_thumb_medium', '_thumb_large') + '"></a>',
-		 	'<p>Wildflower magazine educates people about how native wildflowers, plants and landscapes affect our lives, not only through their beauty but also through the benefits they provide to ecosystems everywhere.</p>',
-		 	'<p>Published quarterly, the 36-page Wildflower magazine is available by joining the Wildflower Center.</p>',
+		 	'<p><em>Wildflower</em> magazine educates people about how native wildflowers, plants and landscapes affect our lives, not only through their beauty but also through the benefits they provide to ecosystems everywhere.</p>',
+		 	'<p>Published quarterly, the 36-page <em>Wildflower</em> magazine is available by joining the Wildflower Center.</p>',
 		 	'<a class="sidebar-button" href="' + issues[i].url + '" target="_blank">Read Current Issue: ' + issues[i].title.replace('Wildflower Magazine - ', '') + '</a>',
 		 	'</div>'
 		].join('');

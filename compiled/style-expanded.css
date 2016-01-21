@@ -894,6 +894,29 @@ figcaption.wp-caption-text {
   color: inherit;
   font-size: 0.85rem;
   font-style: italic;
+  line-height: 160%;
+}
+
+blockquote {
+  border-bottom: 1px solid #dedede;
+  border-top: 1px solid #dedede;
+  display: table;
+  font-style: italic;
+  margin: 2rem auto 1.75rem;
+  max-width: 30rem;
+  padding: 1.45rem 1.2rem 1.3rem;
+  position: relative;
+  line-height: 170%;
+}
+
+blockquote:before {
+  color: rgba(0, 0, 0, 0.08);
+  content: '\f10d';
+  font-size: 2.95rem;
+  font-family: FontAwesome;
+  font-style: initial;
+  position: absolute;
+  top: 1.2rem;
 }
 
 .flex-container-row {
