@@ -32,11 +32,13 @@
 }
 
 .sidebar-list-heading {
-    background-color: $wfc-lightyellow;
+    background-color: $wfc-lightorange;
     border-bottom: 1px solid $wfc-lightgray;
+    color: $wfc-white;
     padding: 1rem 1rem 0.5rem;
 
     h6 {
+        font-weight: 600;
     	line-height: 125%;
     	margin-bottom: 0.5rem;
 	}

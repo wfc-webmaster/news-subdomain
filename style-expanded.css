@@ -370,11 +370,13 @@ pagination-top {
 }
 
 .sidebar-list-heading {
-  background-color: lightgoldenrodyellow;
+  background-color: #f0b252;
   border-bottom: 1px solid #dedede;
+  color: #fff;
   padding: 1rem 1rem 0.5rem;
 }
 .sidebar-list-heading h6 {
+  font-weight: 600;
   line-height: 125%;
   margin-bottom: 0.5rem;
 }
