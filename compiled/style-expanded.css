@@ -921,6 +921,15 @@ blockquote:before {
   top: 1.2rem;
 }
 
+blockquote p {
+  margin: 0;
+}
+
+.entry-content ul li {
+  list-style: outside;
+  margin-left: 2.5rem;
+}
+
 .flex-container-row {
   display: flex !important;
   flex-flow: row wrap;

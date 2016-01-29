@@ -244,3 +244,14 @@ blockquote:before {
     position: absolute;
     top: 1.2rem;
 }
+
+blockquote p {
+    margin: 0;
+}
+
+//Unordered Lists (entry content)
+
+.entry-content ul li {
+    list-style: outside;
+    margin-left: 2.5rem;
+}

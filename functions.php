@@ -2,7 +2,15 @@
 
 //Enable jQuery
 wp_enqueue_script('jquery');
-remove_filter( 'the_content', 'wpautop' );
+
+//Remove automatically added <p> tag on pages
+
+function remove_p_tags_on_pages() {
+	if (is_page()) {
+	remove_filter( 'the_content', 'wpautop' );
+	}
+}
+add_action('wp_head', 'remove_p_tags_on_pages');
 
 //Remove default Headway styling
 function remove_content_styling() {
